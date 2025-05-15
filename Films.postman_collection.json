@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "ef2b2d34-6f6e-4d27-8753-ffe9512054f1",
+		"name": "Films",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38638499"
+	},
+	"item": [
+		{
+			"name": "getFilmsByDirectorJSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/filmservice/filmsBydirector?director=James Cameron",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmservice",
+						"filmsBydirector"
+					],
+					"query": [
+						{
+							"key": "director",
+							"value": "James Cameron"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFilmsByDirectorXML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/filmservice/filmsBydirector?director=James Cameron",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmservice",
+						"filmsBydirector"
+					],
+					"query": [
+						{
+							"key": "director",
+							"value": "James Cameron"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFilmsByTitleJSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/filmservice/filmsByTitle?title=Avatar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmservice",
+						"filmsByTitle"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Avatar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFilmsByTitleXML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/filmservice/filmsByTitle?title=Avatar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmservice",
+						"filmsByTitle"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Avatar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifyFilmJSON",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"filmID\": 4,\r\n    \"filmTitle\": \"Terminator 2 modified\",\r\n    \"filmYear\": 1991,\r\n    \"filmGenre\": \"Science Fiction\",\r\n    \"filmDuration\": 137,\r\n    \"filmCountry\": \"EEUU\",\r\n    \"filmDirector\": \"James Cameron\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/filmservice/modify/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmservice",
+						"modify",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifyFilmXML",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<Film>\r\n    <filmID>6</filmID>\r\n    <filmTitle>Inglorius Bastards Created</filmTitle>\r\n    <filmYear>2009</filmYear>\r\n    <filmGenre>Drama</filmGenre>\r\n    <filmDuration>153</filmDuration>\r\n    <filmCountry>EEUU</filmCountry>\r\n    <filmDirector>Quentin Tarantino</filmDirector>\r\n</Film>\r\n \r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/filmservice/modify/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmservice",
+						"modify",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addFilmJSON",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filmID\": 5,\r\n    \"filmTitle\": \"Avatar 2\",\r\n    \"filmYear\": 2023,\r\n    \"filmGenre\": \"Science Fiction\",\r\n    \"filmDuration\": 137,\r\n    \"filmCountry\": \"EEUU\",\r\n    \"filmDirector\": \"James Cameron\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/filmservice/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmservice",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addFilmXML",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<Film>\r\n    <filmTitle>Terminator</filmTitle>\r\n    <filmYear>2009</filmYear>\r\n    <filmGenre>Science Fiction</filmGenre>\r\n    <filmDuration>162</filmDuration>\r\n    <filmCountry>EEUU</filmCountry>\r\n    <filmDirector>James Cameron</filmDirector>\r\n</Film>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/filmservice/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmservice",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteFilm",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "a",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/filmservice/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmservice",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/filmservice/show",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filmservice",
+						"show"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
