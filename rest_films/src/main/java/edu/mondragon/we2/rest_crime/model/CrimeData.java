@@ -1,74 +1,55 @@
 package edu.mondragon.we2.rest_crime.model;
 
+import java.util.UUID;
+
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
+
+@Table("crime")
 public class CrimeData {
-    private String category;
-    private String location_type;
-    private Location location;
-    private String context;
-    private Object outcome_status; // Use a specific class if needed
-    private String persistent_id;
+
+    @PrimaryKey
     private long id;
-    private String location_subtype;
+
+    private String category;
+    private String context;
+    private Double latitude;
+    private Double longitude;
+
+    public CrimeData() {
+    }
+
+    @Column("street_id")
+    private Long streetId;
+
+    @Column("street_name")
+    private String streetName;
+
+    @Column("location_type")
+    private String locationType;
+
+    @Column("location_subtype")
+    private String locationSubtype;
+
+    @Column("outcome_category")
+    private String outcomeCategory;
+
+    @Column("outcome_date")
+    private String outcomeDate;
+
     private String month;
 
-    // Inner class for Location
-    public static class Location {
-        private String latitude;
-        private String longitude;
-        private Street street;
+    @Column("persistent_id")
+    private String persistentId;
 
-        // Getters and Setters
-
-        public String getLatitude() {
-            return latitude;
-        }
-
-        public void setLatitude(String latitude) {
-            this.latitude = latitude;
-        }
-
-        public String getLongitude() {
-            return longitude;
-        }
-
-        public void setLongitude(String longitude) {
-            this.longitude = longitude;
-        }
-
-        public Street getStreet() {
-            return street;
-        }
-
-        public void setStreet(Street street) {
-            this.street = street;
-        }
+    public long getId() {
+        return id;
     }
 
-    // Inner class for Street
-    public static class Street {
-        private int id;
-        private String name;
-
-        // Getters and Setters
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
+    public void setId(long id) {
+        this.id = id;
     }
-
-    // Getters and setters for CrimeData fields
 
     public String getCategory() {
         return category;
@@ -76,22 +57,6 @@ public class CrimeData {
 
     public void setCategory(String category) {
         this.category = category;
-    }
-
-    public String getLocation_type() {
-        return location_type;
-    }
-
-    public void setLocation_type(String location_type) {
-        this.location_type = location_type;
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 
     public String getContext() {
@@ -102,36 +67,68 @@ public class CrimeData {
         this.context = context;
     }
 
-    public Object getOutcome_status() {
-        return outcome_status;
+    public Double getLatitude() {
+        return latitude;
     }
 
-    public void setOutcome_status(Object outcome_status) {
-        this.outcome_status = outcome_status;
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
     }
 
-    public String getPersistent_id() {
-        return persistent_id;
+    public Double getLongitude() {
+        return longitude;
     }
 
-    public void setPersistent_id(String persistent_id) {
-        this.persistent_id = persistent_id;
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 
-    public long getId() {
-        return id;
+    public Long getStreetId() {
+        return streetId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setStreetId(Long streetId) {
+        this.streetId = streetId;
     }
 
-    public String getLocation_subtype() {
-        return location_subtype;
+    public String getStreetName() {
+        return streetName;
     }
 
-    public void setLocation_subtype(String location_subtype) {
-        this.location_subtype = location_subtype;
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
+    public String getLocationType() {
+        return locationType;
+    }
+
+    public void setLocationType(String locationType) {
+        this.locationType = locationType;
+    }
+
+    public String getLocationSubtype() {
+        return locationSubtype;
+    }
+
+    public void setLocationSubtype(String locationSubtype) {
+        this.locationSubtype = locationSubtype;
+    }
+
+    public String getOutcomeCategory() {
+        return outcomeCategory;
+    }
+
+    public void setOutcomeCategory(String outcomeCategory) {
+        this.outcomeCategory = outcomeCategory;
+    }
+
+    public String getOutcomeDate() {
+        return outcomeDate;
+    }
+
+    public void setOutcomeDate(String outcomeDate) {
+        this.outcomeDate = outcomeDate;
     }
 
     public String getMonth() {
@@ -140,5 +137,13 @@ public class CrimeData {
 
     public void setMonth(String month) {
         this.month = month;
+    }
+
+    public String getPersistentId() {
+        return persistentId;
+    }
+
+    public void setPersistentId(String persistentId) {
+        this.persistentId = persistentId;
     }
 }

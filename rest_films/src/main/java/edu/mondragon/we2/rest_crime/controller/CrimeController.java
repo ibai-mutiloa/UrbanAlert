@@ -9,14 +9,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import edu.mondragon.we2.rest_crime.model.CrimeData;
-import edu.mondragon.we2.rest_crime.model.CrimeRepository;
+import edu.mondragon.we2.rest_crime.model.CrimeDataRepository;
+import edu.mondragon.we2.rest_crime.service.CrimeService;
 
 @RestController
 @RequestMapping("/crimeservice")
 public class CrimeController {
 
     @Autowired
-    CrimeRepository crimeRepository;
+    private CrimeDataRepository crimeRepository;
+
+    @Autowired
+    private CrimeService crimeService;  // Inyectamos el servicio
 
     @GetMapping(value = "/all", produces = { "application/json", "application/xml" })
     public ResponseEntity<List<CrimeData>> getAllCrimes() {
@@ -51,29 +55,29 @@ public class CrimeController {
     @PostMapping(value = "/add", consumes = { "application/json", "application/xml" }, produces = {
             "application/json", "application/xml" })
     public ResponseEntity<CrimeData> addCrime(@RequestBody CrimeData crime) {
-        Optional<CrimeData> found = crimeRepository.findById(crime.getId());
-        if (found.isPresent()) {
-            return ResponseEntity.badRequest().build();
-        } else {
-            crimeRepository.save(crime);
-            return new ResponseEntity<>(crime, HttpStatus.CREATED);
-        }
+        // Usar el servicio para agregar el crimen con ID secuencial
+        CrimeData savedCrime = crimeService.addCrime(crime);
+        return new ResponseEntity<>(savedCrime, HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/update/{id}", consumes = { "application/json", "application/xml" }, produces = {
-            "application/json", "application/xml" })
-    public ResponseEntity<CrimeData> updateCrime(@PathVariable Long id, @RequestBody CrimeData crime) {
+    @PutMapping(value = "/update/{id}")
+    public ResponseEntity<CrimeData> updateCrime(@PathVariable long id, @RequestBody CrimeData crime) {
         Optional<CrimeData> found = crimeRepository.findById(id);
         if (found.isPresent()) {
             CrimeData existing = found.get();
             existing.setCategory(crime.getCategory());
             existing.setMonth(crime.getMonth());
             existing.setContext(crime.getContext());
-            existing.setLocation(crime.getLocation());
-            existing.setLocation(crime.getLocation());
-            existing.setPersistent_id(crime.getPersistent_id());
-            existing.setLocation(crime.getLocation());
-            existing.setOutcome_status(crime.getOutcome_status());
+            existing.setLocationType(crime.getLocationType());
+            existing.setLatitude(crime.getLatitude());
+            existing.setLongitude(crime.getLongitude());
+            existing.setStreetId(crime.getStreetId());
+            existing.setStreetName(crime.getStreetName());
+            existing.setPersistentId(crime.getPersistentId());
+            existing.setLocationSubtype(crime.getLocationSubtype());
+            existing.setOutcomeCategory(crime.getOutcomeCategory());
+            existing.setOutcomeDate(crime.getOutcomeDate());
+
             crimeRepository.save(existing);
             return new ResponseEntity<>(existing, HttpStatus.OK);
         } else {
@@ -82,7 +86,7 @@ public class CrimeController {
     }
 
     @DeleteMapping(value = "/delete/{id}")
-    public ResponseEntity<Void> deleteCrime(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteCrime(@PathVariable long id) {
         Optional<CrimeData> found = crimeRepository.findById(id);
         if (found.isPresent()) {
             crimeRepository.delete(found.get());
