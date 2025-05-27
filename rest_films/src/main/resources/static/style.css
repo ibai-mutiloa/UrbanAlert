@@ -37,3 +37,10 @@ body, html {
   .sidebar a:hover {
     text-decoration: underline;
   }
+
+  #grafikak {
+    display: block;
+    float: inline-start;
+    height: 500px;
+    width: 500px;
+  }
