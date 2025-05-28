@@ -26,13 +26,27 @@
   <!-- End Matomo Code -->
 </head>
 <body>
-  <div id="inicio" class="text-center">
-    <div>
-      <h1>Elige una ciudad</h1>
-      <button id="btn-londres" class="btn btn-primary mt-4">Londres</button>
-    </div>
-  </div>
+<div id="inicio" class="text-center mt-5">
+  <h1>Elige una ciudad</h1>
+  <div class="d-flex justify-content-center flex-wrap gap-4 mt-4">
+    
+    <!-- Londres -->
+    <button id="btn-londres" class="btn btn-outline-primary d-flex align-items-center p-3 shadow rounded-4" style="gap: 10px; font-size: 1.2rem;">
+      <img src="https://flagcdn.com/w80/gb.png" alt="Bandera Reino Unido" width="40" height="25" style="object-fit: cover; border-radius: 4px;" />
+      Londres
+    </button>
 
+    <!-- Ciudad de México -->
+    <button id="btn-mexico" class="btn btn-outline-success d-flex align-items-center p-3 shadow rounded-4" style="gap: 10px; font-size: 1.2rem;">
+      <img src="https://flagcdn.com/w80/mx.png" alt="Bandera México" width="40" height="25" style="object-fit: cover; border-radius: 4px;" />
+      Ciudad de México
+    </button>
+
+    <!-- Nueva York -->
+    <button id="btn-ny" class="btn btn-outline-danger d-flex align-items-center p-3 shadow rounded-4" style="gap: 10px; font-size: 1.2rem;">
+      <img src="https://flagcdn.com/w80/us.png" alt="Bandera Estados Unidos" width="40" height="25" style="object-fit: cover; border-radius: 4px;" />
+      Nueva York
+    </button>
   <div id="mapa-container" class="container-fluid">
     <div class="row">
       <nav class="col-md-2 d-none d-md-block sidebar">

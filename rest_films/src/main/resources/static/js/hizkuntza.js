@@ -1,5 +1,11 @@
 const traducciones = {
     es: {
+            
+    registerRolLabel: "Tipo de usuario",
+    rolHerritar: "Ciudadano",
+    rolTurista: "Turista",
+    rolErakunde: "Institución",
+    rolInversor: "Inversor",
             // INICIO.HTML
     bienvenidaTitulo: "Bienvenido a UrbanAlert",
     bienvenidaTexto: "Explora nuestras funcionalidades y descubre cómo podemos ayudarte.<br />Crea una cuenta o inicia sesión para comenzar.",
@@ -61,6 +67,12 @@ const traducciones = {
         bidaliBotoia: "Mandar"
     },
     eu: {
+
+    registerRolLabel: "Erabiltzaile mota",
+    rolHerritar: "Herritarra",
+    rolTurista: "Turista",
+    rolErakunde: "Erakundea",
+    rolInversor: "Inbertitzailea",
         // INICIO.HTML
     bienvenidaTitulo: "Ongi etorri UrbanAlert-era",
     bienvenidaTexto: "Ezagutu gure funtzionalitateak eta nola lagundu diezazukegun.<br />Sortu kontu bat edo hasi saioa hasteko.",
@@ -121,6 +133,12 @@ const traducciones = {
         bidaliBotoia: "Bidali"
     },
     en:{
+
+    registerRolLabel: "User type",
+    rolHerritar: "Citizen",
+    rolTurista: "Tourist",
+    rolErakunde: "Institution",
+    rolInversor: "Investor",
             // INICIO.HTML
     bienvenidaTitulo: "Welcome to UrbanAlert",
     bienvenidaTexto: "Explore our features and see how we can help you.<br />Create an account or log in to get started.",
@@ -219,6 +237,13 @@ function cambiarIdioma(idioma) {
     document.getElementById("registerYaCuenta").childNodes[0].textContent = t.registerYaCuenta + " ";
     document.getElementById("registerIniciarSesionLink").textContent = t.registerIniciarSesionLink;
     }
+    //SELECTOR TIPO DE USUARIO 
+    document.getElementById("registerRolLabel").textContent = t.registerRolLabel;
+    document.getElementById("rolHerritar").textContent = t.rolHerritar;
+    document.getElementById("rolTurista").textContent = t.rolTurista;
+    document.getElementById("rolErakunde").textContent = t.rolErakunde;
+    document.getElementById("rolInversor").textContent = t.rolInversor;
+
     // COMENTARIO.HTML
     document.getElementById("formTitulua").textContent = t.titulua;
     document.getElementById("herrialdearenLabela").textContent = t.herrialdea;

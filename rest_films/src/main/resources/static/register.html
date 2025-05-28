@@ -51,6 +51,15 @@
             <label for="repeat-password" class="form-label" id="registerRepetirContrasenaLabel">Repite la Contraseña</label>
           <input type="password" class="form-control" id="repeat-password" name="repeat-password" required />
         </div>
+        <div class="mb-3">   
+            <label for="rol" class="form-label" id="registerRolLabel">Tipo de usuario</label>
+            <select class="form-select" id="rol" name="rol" required>
+                <option value="herritar" id="rolHerritar">Ciudadano</option>
+                <option value="turista" id="rolTurista">Turista</option>
+                <option value="erakunde" id="rolErakunde">Institución</option>
+                <option value="inversor" id="rolInversor">Inversor</option>
+            </select>
+        </div>
         <button type="submit" class="btn btn-success w-100" id="registerRegistrarseBtn">Registrarse</button>
       </form>
         <p class="text-center mt-3" id="registerYaCuenta">
