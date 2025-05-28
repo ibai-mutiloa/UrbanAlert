@@ -9,6 +9,8 @@ import com.datastax.oss.driver.api.core.cql.SimpleStatement;
 import edu.mondragon.we2.rest_crime.model.CrimeData;
 import edu.mondragon.we2.rest_crime.model.CrimeDataRepository;
 
+import java.util.Optional;
+
 @Service
 public class CrimeService {
 
@@ -22,10 +24,9 @@ public class CrimeService {
         // Crear la consulta SELECT con SimpleStatement
         String selectQuery = "SELECT last_id FROM crime_id_counter WHERE counter_name = 'crime'";
         SimpleStatement selectStmt = SimpleStatement.builder(selectQuery).build();
-        Long lastId = cassandraTemplate.selectOne(selectStmt, Long.class);
-        if (lastId == null) {
-            lastId = 0L;
-        }
+
+        Long lastId = Optional.ofNullable(cassandraTemplate.selectOne(selectStmt, Long.class))
+                              .orElse(0L);
         long nextId = lastId + 1;
 
         // Crear la consulta UPDATE con parámetro usando SimpleStatement
