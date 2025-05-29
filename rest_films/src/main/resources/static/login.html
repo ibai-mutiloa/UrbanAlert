@@ -8,29 +8,32 @@
 </head>
 <body class="bg-light">
 
-  <!-- Barra superior con botón de inicio y selector de idioma -->
-  <div class="container-fluid bg-light py-2 shadow-sm">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a href="inicio.html" class="btn btn-outline-primary">
-        🏠 Inicio
-      </a>
-      <div class="dropdown">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-          🌐 Idioma
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-          <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">🇪🇸 Español</a></li>
-          <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('eu')">🇪🇺 Euskara</a></li>
-          <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('en')">🇬🇧 English</a></li>
-        </ul>
+    <!-- Barra superior con botón de inicio y selector de idioma -->
+    <div class="container-fluid bg-light py-2 shadow-sm">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="inicio.html" class="btn btn-outline-primary">
+          🏠 Inicio
+        </a>
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            🌐 Idioma
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">🇪🇸 Español</a></li>
+            <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('eu')">🇪🇺 Euskara</a></li>
+            <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('en')">🇬🇧 English</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
+  <!-- Dentro del <body>, reemplaza la parte de login así -->
   <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="card shadow-sm p-4" style="width: 100%; max-width: 400px;">
       <h2 class="text-center mb-4" id="loginTitulo">Iniciar sesión</h2>
-      <form method="POST" action="/login">
+
+      <!-- Añadimos el formulario -->
+      <form id="loginForm">
         <div class="mb-3">
           <label for="username" class="form-label" id="loginUsuarioLabel">Nombre de Usuario</label>
           <input type="text" class="form-control" id="username" name="username" required />
@@ -41,11 +44,24 @@
         </div>
         <button type="submit" class="btn btn-primary w-100" id="loginEntrarBtn">Entrar</button>
       </form>
-        <p class="text-center mt-3" id="loginNoCuenta">
-          ¿No tienes cuenta? <a href="register.html" id="loginRegistrateLink">Regístrate</a>
-        </p>
+
+      <p class="text-center mt-3" id="loginNoCuenta">
+        ¿No tienes cuenta? <a href="register.html" id="loginRegistrateLink">Regístrate</a>
+      </p>
     </div>
   </div>
+
+  <!-- Agrega este script debajo del cierre de bootstrap -->
+  <script>
+    // Captura el envío del formulario
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Evita que se recargue
+      // Aquí podrías validar si usuario y contraseña son correctos
+      // Por ahora redirige directamente:
+      window.location.href = "seleccion-ciudad.html";
+    });
+  </script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/hizkuntza.js"></script>

@@ -30,7 +30,7 @@
   <div class="container d-flex justify-content-center align-items-center vh-100">
     <div class="card shadow-sm p-4" style="width: 100%; max-width: 450px;">
         <h2 class="text-center mb-4" id="registerTitulo">Crear cuenta</h2>
-      <form method="POST" action="/register">
+      <form id="registerForm">
         <div class="mb-3">
             <label for="username" class="form-label" id="registerUsuarioLabel">Nombre de Usuario</label>
           <input type="text" class="form-control" id="username" name="username" required />
@@ -67,7 +67,17 @@
         </p>
     </div>
   </div>
+  <!-- Al final del body -->
+<script>
+  document.getElementById("registerForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
+    const rol = document.getElementById("rol").value;
+    localStorage.setItem("usuarioTipo", rol); // Guarda el rol en localStorage
+
+    window.location.href = "login.html"; // O a tu dashboard directamente
+  });
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/hizkuntza.js"></script>
 </body>

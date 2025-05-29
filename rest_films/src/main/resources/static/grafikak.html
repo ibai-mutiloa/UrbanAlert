@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>UrbanAlert - Estadísticas</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- JS libs -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+  <!-- Custom scripts -->
+  <script src="js/chart.js" defer></script>
+  <script src="js/heatmap.js" defer></script>
 </head>
 <body>
   <nav>
@@ -17,15 +27,13 @@
     <h2>Estadísticas de Delitos</h2>
     <canvas id="crimeChart"></canvas>
     <canvas id="crimeChartYear"></canvas>
-  <div class="container">
+
     <h2>Mapa de Calor de Crímenes</h2>
     <div id="heatmap" style="height: 500px;"></div>
-  </div>
-    <!-- Botón para volver al inicio -->
+
     <div style="margin-top: 30px; text-align: center;">
       <a href="index.html" class="btn">Volver al inicio</a>
     </div>
-    
   </div>
 </body>
 </html>
