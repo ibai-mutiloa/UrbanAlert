@@ -30,60 +30,89 @@
 <!-- End Matomo Code -->
 </head>
 <body id="iruzkinBody">
-    <select onchange="cambiarIdioma(this.value)">
-      <option value="eu">Euskara</option>
-      <option value="es">Español</option>
-      <option value="en">English</option>
-    </select>
+  <!-- Ejemplo para poner en el body, arriba a la izquierda -->
+<a href="panel-londres.html" style="position: fixed; top: 10px; left: 10px; font-size: 24px; font-weight: bold; text-decoration: none; color: black; background: #eee; padding: 5px 10px; border-radius: 4px; box-shadow: 0 0 4px rgba(0,0,0,0.2); z-index: 1000;">×</a>
+
+    <div class="container-fluid bg-light py-2 shadow-sm">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="btn btn-outline-primary">🏠 Inicio</a>
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            🌐 Idioma
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">🇪🇸 Español</a></li>
+            <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('eu')">🇪🇺 Euskara</a></li>
+            <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('en')">🇬🇧 English</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div id="iruzkinak">
-        <form id="iruzkinFormulario">
-            <h2 id="formTitulua">Iruzkina gehitu</h2>
-            <br>
-            <label for="herrialdea" id="herrialdearenLabela">Herrialdea:</label>
-            <input type="text" id="herrialdea" name="herrialdea" placeholder="Adib: Espainia" required><br><br>
-            
-            <label for="hiria" id="hiriarenLabela">Hiria/Herria:</label>
-            <input type="text" id="hiria" name="hiria" placeholder="Adib: Bilbo" required><br><br>
+        <form id="iruzkinFormulario" class="container my-4" style="max-width: 600px;">
+        <h2 id="formTitulua" class="mb-4 text-center">Iruzkina gehitu</h2>
 
-            <label for="kalea" id="kalearenLabela">Kalea:</label>
-            <input type="text" id="kalea" name="kalea" placeholder="Adib: Gran Vía, 45" required><br><br>
+        <div class="mb-3">
+          <label for="herrialdea" id="herrialdearenLabela" class="form-label">Herrialdea:</label>
+          <input type="text" id="herrialdea" name="herrialdea" placeholder="Adib: Espainia" class="form-control" required>
+        </div>
 
-            <label for="postaKodea" id="postaKodearenLabela">Posta-kodea:</label>
-            <input type="number" id="postaKodea" name="postaKodea" placeholder="Adib: 48001" required><br><br>
+        <div class="mb-3">
+          <label for="hiria" id="hiriarenLabela" class="form-label">Hiria/Herria:</label>
+          <input type="text" id="hiria" name="hiria" placeholder="Adib: Bilbo" class="form-control" required>
+        </div>
 
-            <label for="motaDelitua" id="motaDelituarenLabela">Aukeratu delitu mota:</label>
-            <select id="motaDelitua" name="motaDelitua" required>
-                <option id="delituaDesgaituta" value="" disabled selected>-- Aukeratu delitua --</option>  
-                <option id="lapurreta" value="robo">robo</option>
-                <option id="eraso" value="asalto">asalto</option>
-                <option id="bandalismo" value="vandalismo">vandalismo</option>
-                <option id="hilketa" value="homicidio">homicidio</option>
-                <option id="iruzur" value="fraude">fraude</option>
-                <option id="jazarpen" value="acoso">acoso</option>
-                <option id="bortxaketa" value="violacion">violación</option>
-            </select>
-            <br><br>
+        <div class="mb-3">
+          <label for="kalea" id="kalearenLabela" class="form-label">Kalea:</label>
+          <input type="text" id="kalea" name="kalea" placeholder="Adib: Gran Vía, 45" class="form-control" required>
+        </div>
 
-            <label for="data" id="datarenLabela">Data:</label>
-            <input type="date" id="data" name="data" required><br><br>
+        <div class="mb-3">
+          <label for="postaKodea" id="postaKodearenLabela" class="form-label">Posta-kodea:</label>
+          <input type="number" id="postaKodea" name="postaKodea" placeholder="Adib: 48001" class="form-control" required>
+        </div>
 
-            <label for="iruzkin" id="iruzkinLabela">Idatzi hemen iruzkina:</label>
-            <textarea id="iruzkin" name="iruzkin" placeholder="Idatzi hemen zure iruzkina" rows="6" cols="50" required></textarea><br><br>
+        <div class="mb-3">
+          <label for="motaDelitua" id="motaDelituarenLabela" class="form-label">Aukeratu delitu mota:</label>
+          <select id="motaDelitua" name="motaDelitua" class="form-select" required>
+            <option id="delituaDesgaituta" value="" disabled selected>-- Aukeratu delitua --</option>  
+            <option id="lapurreta" value="robo">robo</option>
+            <option id="eraso" value="asalto">asalto</option>
+            <option id="bandalismo" value="vandalismo">vandalismo</option>
+            <option id="hilketa" value="homicidio">homicidio</option>
+            <option id="iruzur" value="fraude">fraude</option>
+            <option id="jazarpen" value="acoso">acoso</option>
+            <option id="bortxaketa" value="violacion">violación</option>
+          </select>
+        </div>
 
-            <label for="balorazioa" id="balorazioarenLabela">Baloratu delitua (1-txikia, 5-grabe):</label>
-            <select id="balorazioa" name="balorazioa" required>
-                <option id="aukeratuBalorazioa" value="" disabled selected>-- Aukeratu balorazioa --</option>  
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-            <br>
-            <br>
+        <div class="mb-3">
+          <label for="data" id="datarenLabela" class="form-label">Data:</label>
+          <input type="date" id="data" name="data" class="form-control" required>
+        </div>
 
-            <input id="bidaliBotoia" type="submit" value="Bidali">
-        </form>
+        <div class="mb-3">
+          <label for="iruzkin" id="iruzkinLabela" class="form-label">Idatzi hemen iruzkina:</label>
+          <textarea id="iruzkin" name="iruzkin" placeholder="Idatzi hemen zure iruzkina" rows="6" class="form-control" required></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="balorazioa" id="balorazioarenLabela" class="form-label">Baloratu delitua (1-txikia, 5-grabe):</label>
+          <select id="balorazioa" name="balorazioa" class="form-select" required>
+            <option id="aukeratuBalorazioa" value="" disabled selected>-- Aukeratu balorazioa --</option>  
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <div class="d-grid">
+          <button id="bidaliBotoia" type="submit" class="btn btn-primary btn-lg">Bidali</button>
+        </div>
+      </form>
+
     </div>
 
   
@@ -94,7 +123,7 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <script src="js/comentarios.js"></script>
+  <script src="js/comentario.js"></script>
   <script src="js/hizkuntza.js"></script>
 </body>
 </html>
