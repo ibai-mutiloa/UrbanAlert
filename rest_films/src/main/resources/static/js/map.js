@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }).addTo(map);
 
   let markers = new Map();
+  let currentFilter = 'todos';
 
-  // Iconos para crímenes (sin violación)
   const icons = {
     'robo': L.icon({ iconUrl: 'icons/robo-icon.png', iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34] }),
     'asalto': L.icon({ iconUrl: 'icons/asalto-icon.png', iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34] }),
@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     'default': L.icon({ iconUrl: 'icons/default-icon.png', iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34] })
   };
 
-  // Icono para comentarios (nube/bocadillo)
   const commentIcon = L.icon({
     iconUrl: 'icons/comment-bubble-icon.png',
     iconSize: [30, 30],
@@ -26,31 +25,41 @@ document.addEventListener('DOMContentLoaded', function () {
     popupAnchor: [0, -15]
   });
 
-  function fetchAndAddCrimes() {
+  function clearMarkers() {
+    markers.forEach(marker => {
+      map.removeLayer(marker);
+    });
+    markers.clear();
+  }
+
+  function fetchAndAddData() {
+    clearMarkers();
+
+    // Cargar crímenes
     fetch('crimeservice/all')
       .then(response => response.json())
       .then(crimes => {
         crimes.forEach(crime => {
-          // Solo mostrar tipos que tenemos definidos en icons (sin violación)
           const tipo = crime.category.toLowerCase();
-          if (icons[tipo] && !markers.has(crime.id)) {
+          if (
+            icons[tipo] &&
+            (currentFilter === 'todos' || currentFilter === tipo)
+          ) {
             const marker = L.marker([crime.latitude, crime.longitude], { icon: icons[tipo] })
               .addTo(map)
               .bindPopup(`<b>Categoría:</b> ${crime.category}<br><b>Fecha:</b> ${crime.month}`);
-            markers.set(crime.id, marker);
+            markers.set('crime_' + crime.id, marker);
           }
         });
       })
       .catch(err => console.error('Error fetching crimes:', err));
-  }
 
-  function fetchAndAddComments() {
+    // Cargar comentarios
     fetch('/api/comments')
       .then(response => response.json())
       .then(comments => {
         comments.forEach(comment => {
-          if (!markers.has(comment.id) && comment.latitude && comment.longitude) {
-            // Icono de comentario siempre igual
+          if (comment.latitude && comment.longitude) {
             const marker = L.marker([comment.latitude, comment.longitude], { icon: commentIcon })
               .addTo(map)
               .bindPopup(`
@@ -59,16 +68,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 <b>Fecha:</b> ${comment.date || 'No especificada'}<br>
                 <b>Valoración:</b> ${comment.rating || 'No disponible'}
               `);
-            markers.set(comment.id, marker);
+            markers.set('comment_' + comment.id, marker);
           }
         });
       })
       .catch(err => console.error('Error fetching comments:', err));
   }
 
-  fetchAndAddCrimes();
-  fetchAndAddComments();
+  // Filtro de tipo de crimen
+  const filterSelect = document.getElementById('crimeFilter');
+  if (filterSelect) {
+    filterSelect.addEventListener('change', function () {
+      currentFilter = this.value;
+      fetchAndAddData();
+    });
+  }
 
-  setInterval(fetchAndAddCrimes, 10000);
-  setInterval(fetchAndAddComments, 10000);
+  // Inicializar y actualizar cada 10 segundos
+  fetchAndAddData();
+  setInterval(fetchAndAddData, 10000);
 });

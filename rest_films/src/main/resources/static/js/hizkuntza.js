@@ -79,9 +79,31 @@ const traducciones = {
         jazarpen: "Acoso",
         bortxaketa: "Violación",
         aukeratuBalorazioa: "Seleccionar valoración:",
-        bidaliBotoia: "Mandar"
+        bidaliBotoia: "Mandar",
+
+        // ... otras traducciones
+        registerUsuarioLabel: "Nombre de Usuario",
+        registerNombreLabel: "Nombre completo",
+        registerEmailLabel: "Correo electrónico",
+        registerRolLabel: "Tipo de usuario",
+        rolHerritar: "Ciudadano",
+        rolTurista: "Turista",
+        rolErakunde: "Institución",
+        rolInversor: "Inversor",
+        guardarCambiosBtn: "Guardar cambios"
     },
     eu: {
+        // ... otras traducciones
+        registerUsuarioLabel: "Erabiltzaile izena",
+        registerNombreLabel: "Izen osoa",
+        registerEmailLabel: "Posta elektronikoa",
+        registerRolLabel: "Erabiltzaile mota",
+        rolHerritar: "Herritarra",
+        rolTurista: "Turista",
+        rolErakunde: "Erakundea",
+        rolInversor: "Inbertitzailea",
+        guardarCambiosBtn: "Aldaketak gorde",
+
         panelTitulo: "Londresko Panela - UrbanAlert",
         inicioBtn: "🏠 Hasiera",
         sidebarTitulo: "UrbanAlert",
@@ -164,6 +186,16 @@ const traducciones = {
         bidaliBotoia: "Bidali"
     },
     en: {
+        registerUsuarioLabel: "Username",
+        registerNombreLabel: "Full name",
+        registerEmailLabel: "Email",
+        registerRolLabel: "User type",
+        rolHerritar: "Citizen",
+        rolTurista: "Tourist",
+        rolErakunde: "Institution",
+        rolInversor: "Investor",
+        guardarCambiosBtn: "Save changes",
+
         panelTitulo: "Panel London - UrbanAlert",
         inicioBtn: "🏠 Home",
         sidebarTitulo: "UrbanAlert",
@@ -284,7 +316,12 @@ function cambiarValueSiExiste(id, texto) {
 function cambiarIdioma(idioma) {
     idiomaActual = idioma;
     const t = traducciones[idiomaActual];
-
+    // PERFIL USUARIO (añadimos las traducciones para estos IDs)
+    cambiarTextoSiExiste("editUsernameLabel", t.registerUsuarioLabel);
+    cambiarTextoSiExiste("editNameLabel", t.registerNombreLabel);
+    cambiarTextoSiExiste("editEmailLabel", t.registerEmailLabel);
+    cambiarTextoSiExiste("editRolLabel", t.registerRolLabel);
+    cambiarTextoSiExiste("guardarCambiosBtn", t.guardarCambiosBtn);
     // ESTADISTICAS.HTML
     cambiarTextoSiExiste("estadisticasTitulo", t.estadisticasTitulo);
     cambiarTextoSiExiste("delitosTipoTitulo", t.delitosTipoTitulo);
