@@ -13,19 +13,20 @@ document.addEventListener('DOMContentLoaded', function () {
       const heatData = data.map(crime => [
         parseFloat(crime.latitude),
         parseFloat(crime.longitude),
-        0.5 // intensidad base; podrías variarla según gravedad si tienes ese dato
+        1.0 // intensidad aumentada
       ]);
 
-      // Crear capa de calor
+      // Crear capa de calor mejorada
       L.heatLayer(heatData, {
-        radius: 25,
-        blur: 15,
+        radius: 40,  // más grande
+        blur: 10,    // menos desenfoque
         maxZoom: 17,
+        max: 2.0,    // intensidad máxima ajustada
         gradient: {
-          0.1: 'blue',
-          0.3: 'lime',
-          0.6: 'orange',
-          0.9: 'red'
+          0.0: '#00ff00',  // Verde
+          0.4: '#ffff00',  // Amarillo
+          0.7: '#ff8000',  // Naranja
+          1.0: '#ff0000'   // Rojo
         }
       }).addTo(map);
     })

@@ -1,37 +1,52 @@
 const traducciones = {
     es: {
-            
-    registerRolLabel: "Tipo de usuario",
-    rolHerritar: "Ciudadano",
-    rolTurista: "Turista",
-    rolErakunde: "Institución",
-    rolInversor: "Inversor",
-            // INICIO.HTML
-    bienvenidaTitulo: "Bienvenido a UrbanAlert",
-    bienvenidaTexto: "Explora nuestras funcionalidades y descubre cómo podemos ayudarte.<br />Crea una cuenta o inicia sesión para comenzar.",
-    iniciarSesionBtn: "Iniciar sesión",
-    crearCuentaBtn: "Crear cuenta",
+        panelTitulo: "Panel Londres - UrbanAlert",
+        inicioBtn: "🏠 Inicio",
+        sidebarTitulo: "UrbanAlert",
+        cambiarCiudadLink: "← Cambiar Ciudad",
+        grafikakLink: "Gráficas",
+        comentariosLink: "Comentarios",
+        usuarioLink: "Usuario",
+        panelEncabezado: "Panel - Londres",
 
-    // LOGIN.HTML
-    loginTitulo: "Iniciar sesión",
-    loginUsuarioLabel: "Nombre de Usuario",
-    loginContrasenaLabel: "Contraseña",
-    loginEntrarBtn: "Entrar",
-    loginNoCuenta: "¿No tienes cuenta?",
-    loginRegistrateLink: "Regístrate",
+        estadisticasTitulo: "Estadísticas de Delitos",
+        delitosTipoTitulo: "Delitos por tipo",
+        delitosAnioTitulo: "Delitos último año",
+        mapaCalorTitulo: "Mapa de Calor de Crímenes",
+        volverBtn: "Volver al inicio",
 
-    // REGISTER.HTML
-    registerTitulo: "Crear cuenta",
-    registerUsuarioLabel: "Nombre de Usuario",
-    registerNombreLabel: "Nombre completo",
-    registerEmailLabel: "Correo electrónico",
-    registerContrasenaLabel: "Contraseña",
-    registerRepetirContrasenaLabel: "Repite la Contraseña",
-    registerRegistrarseBtn: "Registrarse",
-    registerYaCuenta: "¿Ya tienes cuenta?",
-    registerIniciarSesionLink: "Inicia sesión",
-    // COMENTARIO.HTML
+        registerRolLabel: "Tipo de usuario",
+        rolHerritar: "Ciudadano",
+        rolTurista: "Turista",
+        rolErakunde: "Institución",
+        rolInversor: "Inversor",
 
+        // INICIO.HTML
+        bienvenidaTitulo: "Bienvenido a UrbanAlert",
+        bienvenidaTexto: "Explora nuestras funcionalidades y descubre cómo podemos ayudarte.<br />Crea una cuenta o inicia sesión para comenzar.",
+        iniciarSesionBtn: "Iniciar sesión",
+        crearCuentaBtn: "Crear cuenta",
+
+        // LOGIN.HTML
+        loginTitulo: "Iniciar sesión",
+        loginUsuarioLabel: "Nombre de Usuario",
+        loginContrasenaLabel: "Contraseña",
+        loginEntrarBtn: "Entrar",
+        loginNoCuenta: "¿No tienes cuenta?",
+        loginRegistrateLink: "Regístrate",
+
+        // REGISTER.HTML
+        registerTitulo: "Crear cuenta",
+        registerUsuarioLabel: "Nombre de Usuario",
+        registerNombreLabel: "Nombre completo",
+        registerEmailLabel: "Correo electrónico",
+        registerContrasenaLabel: "Contraseña",
+        registerRepetirContrasenaLabel: "Repite la Contraseña",
+        registerRegistrarseBtn: "Registrarse",
+        registerYaCuenta: "¿Ya tienes cuenta?",
+        registerIniciarSesionLink: "Inicia sesión",
+
+        // COMENTARIO.HTML
         titulua: "Añadir comentario",
         herrialdea: "País:",
         hiria: "Ciudad:",
@@ -57,9 +72,9 @@ const traducciones = {
         alertaOndo: "El comentario se ha enviado correctamente",
         delituaDesgaituta: "Elige el tipo de delito:",
         lapurreta: "Robo",
-        eraso:"Asalto",
-        bandalismo:"Vandalismo",
-        hilketa:"Homicidio",
+        eraso: "Asalto",
+        bandalismo: "Vandalismo",
+        hilketa: "Homicidio",
         iruzur: "Fraude",
         jazarpen: "Acoso",
         bortxaketa: "Violación",
@@ -67,37 +82,53 @@ const traducciones = {
         bidaliBotoia: "Mandar"
     },
     eu: {
+        panelTitulo: "Londresko Panela - UrbanAlert",
+        inicioBtn: "🏠 Hasiera",
+        sidebarTitulo: "UrbanAlert",
+        cambiarCiudadLink: "← Hiria Aldatu",
+        grafikakLink: "Grafikoak",
+        comentariosLink: "Iruzkinak",
+        usuarioLink: "Erabiltzailea",
+        panelEncabezado: "Panela - Londres",
 
-    registerRolLabel: "Erabiltzaile mota",
-    rolHerritar: "Herritarra",
-    rolTurista: "Turista",
-    rolErakunde: "Erakundea",
-    rolInversor: "Inbertitzailea",
+        estadisticasTitulo: "Delituen Estatistikak",
+        delitosTipoTitulo: "Delitu motaren arabera",
+        delitosAnioTitulo: "Azken urteko delituak",
+        mapaCalorTitulo: "Krimenen Bero-mapa",
+        volverBtn: "Hasierara itzuli",
+
+        registerRolLabel: "Erabiltzaile mota",
+        rolHerritar: "Herritarra",
+        rolTurista: "Turista",
+        rolErakunde: "Erakundea",
+        rolInversor: "Inbertitzailea",
+
         // INICIO.HTML
-    bienvenidaTitulo: "Ongi etorri UrbanAlert-era",
-    bienvenidaTexto: "Ezagutu gure funtzionalitateak eta nola lagundu diezazukegun.<br />Sortu kontu bat edo hasi saioa hasteko.",
-    iniciarSesionBtn: "Saioa hasi",
-    crearCuentaBtn: "Kontua sortu",
+        bienvenidaTitulo: "Ongi etorri UrbanAlert-era",
+        bienvenidaTexto: "Ezagutu gure funtzionalitateak eta nola lagundu diezazukegun.<br />Sortu kontu bat edo hasi saioa hasteko.",
+        iniciarSesionBtn: "Saioa hasi",
+        crearCuentaBtn: "Kontua sortu",
 
-    // LOGIN.HTML
-    loginTitulo: "Saioa hasi",
-    loginUsuarioLabel: "Erabiltzaile izena",
-    loginContrasenaLabel: "Pasahitza",
-    loginEntrarBtn: "Sartu",
-    loginNoCuenta: "Ez duzu konturik?",
-    loginRegistrateLink: "Erregistratu",
+        // LOGIN.HTML
+        loginTitulo: "Saioa hasi",
+        loginUsuarioLabel: "Erabiltzaile izena",
+        loginContrasenaLabel: "Pasahitza",
+        loginEntrarBtn: "Sartu",
+        loginNoCuenta: "Ez duzu konturik?",
+        loginRegistrateLink: "Erregistratu",
 
-    // REGISTER.HTML
-    registerTitulo: "Kontua sortu",
-    registerUsuarioLabel: "Erabiltzaile izena",
-    registerNombreLabel: "Izen osoa",
-    registerEmailLabel: "Posta elektronikoa",
-    registerContrasenaLabel: "Pasahitza",
-    registerRepetirContrasenaLabel: "Pasahitza errepikatu",
-    registerRegistrarseBtn: "Erregistratu",
-    registerYaCuenta: "Kontua duzu jada?",
-    registerIniciarSesionLink: "Saioa hasi",
-    // COMENTARIO.HTML
+        // REGISTER.HTML
+        registerTitulo: "Kontua sortu",
+        registerUsuarioLabel: "Erabiltzaile izena",
+        registerNombreLabel: "Izen osoa",
+        registerEmailLabel: "Posta elektronikoa",
+        registerContrasenaLabel: "Pasahitza",
+        registerRepetirContrasenaLabel: "Pasahitza errepikatu",
+        registerRegistrarseBtn: "Erregistratu",
+        registerYaCuenta: "Kontua duzu jada?",
+        registerIniciarSesionLink: "Saioa hasi",
+
+        // COMENTARIO.HTML
         titulua: "Iruzkina gehitu",
         herrialdea: "Herrialdea:",
         hiria: "Hiria/Herria:",
@@ -123,47 +154,63 @@ const traducciones = {
         alertaOndo: "Iruzkina ondo bidali da",
         delituaDesgaituta: "Aukeratu delitu mota:",
         lapurreta: "Lapurreta",
-        eraso:"Eraso",
-        bandalismo:"Bandalismo",
-        hilketa:"Hilketa",
+        eraso: "Eraso",
+        bandalismo: "Bandalismo",
+        hilketa: "Hilketa",
         iruzur: "Iruzur",
         jazarpen: "Jazarpen",
         bortxaketa: "Bortxaketa",
         aukeratuBalorazioa: "Aukeratu balorazioa:",
         bidaliBotoia: "Bidali"
     },
-    en:{
+    en: {
+        panelTitulo: "Panel London - UrbanAlert",
+        inicioBtn: "🏠 Home",
+        sidebarTitulo: "UrbanAlert",
+        cambiarCiudadLink: "← Change City",
+        grafikakLink: "Charts",
+        comentariosLink: "Comments",
+        usuarioLink: "User",
+        panelEncabezado: "Panel - London",
 
-    registerRolLabel: "User type",
-    rolHerritar: "Citizen",
-    rolTurista: "Tourist",
-    rolErakunde: "Institution",
-    rolInversor: "Investor",
-            // INICIO.HTML
-    bienvenidaTitulo: "Welcome to UrbanAlert",
-    bienvenidaTexto: "Explore our features and see how we can help you.<br />Create an account or log in to get started.",
-    iniciarSesionBtn: "Log in",
-    crearCuentaBtn: "Create account",
+        estadisticasTitulo: "Crime Statistics",
+        delitosTipoTitulo: "Crimes by type",
+        delitosAnioTitulo: "Crimes in the last year",
+        mapaCalorTitulo: "Crime Heat Map",
+        volverBtn: "Back to start",
 
-    // LOGIN.HTML
-    loginTitulo: "Log in",
-    loginUsuarioLabel: "Username",
-    loginContrasenaLabel: "Password",
-    loginEntrarBtn: "Enter",
-    loginNoCuenta: "Don't have an account?",
-    loginRegistrateLink: "Register",
+        registerRolLabel: "User type",
+        rolHerritar: "Citizen",
+        rolTurista: "Tourist",
+        rolErakunde: "Institution",
+        rolInversor: "Investor",
 
-    // REGISTER.HTML
-    registerTitulo: "Create account",
-    registerUsuarioLabel: "Username",
-    registerNombreLabel: "Full name",
-    registerEmailLabel: "Email",
-    registerContrasenaLabel: "Password",
-    registerRepetirContrasenaLabel: "Repeat password",
-    registerRegistrarseBtn: "Register",
-    registerYaCuenta: "Already have an account?",
-    registerIniciarSesionLink: "Log in",
-    // COMENTARIO.HTML
+        // INICIO.HTML
+        bienvenidaTitulo: "Welcome to UrbanAlert",
+        bienvenidaTexto: "Explore our features and see how we can help you.<br />Create an account or log in to get started.",
+        iniciarSesionBtn: "Log in",
+        crearCuentaBtn: "Create account",
+
+        // LOGIN.HTML
+        loginTitulo: "Log in",
+        loginUsuarioLabel: "Username",
+        loginContrasenaLabel: "Password",
+        loginEntrarBtn: "Enter",
+        loginNoCuenta: "Don't have an account?",
+        loginRegistrateLink: "Register",
+
+        // REGISTER.HTML
+        registerTitulo: "Create account",
+        registerUsuarioLabel: "Username",
+        registerNombreLabel: "Full name",
+        registerEmailLabel: "Email",
+        registerContrasenaLabel: "Password",
+        registerRepetirContrasenaLabel: "Repeat password",
+        registerRegistrarseBtn: "Register",
+        registerYaCuenta: "Already have an account?",
+        registerIniciarSesionLink: "Log in",
+
+        // COMENTARIO.HTML
         titulua: "Add comment",
         herrialdea: "Country:",
         hiria: "City/People:",
@@ -173,9 +220,9 @@ const traducciones = {
         data: "Date:",
         iruzkin: "Write the comment here:",
         balorazioa: "Value the crime (1-minor, 5-serious):",
-        placeholderHerrialdea: "Adib: Spain",
-        placeholderHiria: "Adib: Bilbao",
-        placeholderKalea: "Adib: Gran Vía, 45",
+        placeholderHerrialdea: "Ex: Spain",
+        placeholderHiria: "Ex: Bilbao",
+        placeholderKalea: "Ex: Gran Vía, 45",
         placeholderIruzkin: "Write down what happened...",
         erroreaHerrialdea: "Country: Enter the name of the country",
         erroreaHiria: "City/Town: Enter the name of the city/Town",
@@ -189,9 +236,9 @@ const traducciones = {
         alertaOndo: "The comment has been sent correctly",
         delituaDesgaituta: "Choose the type of crime:",
         lapurreta: "Robbery",
-        eraso:"Assaul",
-        bandalismo:"Vandalism",
-        hilketa:"Homicide",
+        eraso: "Assault",
+        bandalismo: "Vandalism",
+        hilketa: "Homicide",
         iruzur: "Fraud",
         jazarpen: "Harassment",
         bortxaketa: "Rape",
@@ -201,76 +248,130 @@ const traducciones = {
 };
 
 let idiomaActual = "eu";
+
+// Función auxiliar para cambiar texto si el elemento existe
+function cambiarTextoSiExiste(id, texto) {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+        elemento.textContent = texto;
+    }
+}
+
+// Función auxiliar para cambiar innerHTML si el elemento existe
+function cambiarHTMLSiExiste(id, html) {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+        elemento.innerHTML = html;
+    }
+}
+
+// Función auxiliar para cambiar placeholder si el elemento existe
+function cambiarPlaceholderSiExiste(id, texto) {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+        elemento.placeholder = texto;
+    }
+}
+
+// Función auxiliar para cambiar value si el elemento existe
+function cambiarValueSiExiste(id, texto) {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+        elemento.value = texto;
+    }
+}
+
 function cambiarIdioma(idioma) {
     idiomaActual = idioma;
-    const t = traducciones[idiomaActual]
+    const t = traducciones[idiomaActual];
+
+    // ESTADISTICAS.HTML
+    cambiarTextoSiExiste("estadisticasTitulo", t.estadisticasTitulo);
+    cambiarTextoSiExiste("delitosTipoTitulo", t.delitosTipoTitulo);
+    cambiarTextoSiExiste("delitosAnioTitulo", t.delitosAnioTitulo);
+    cambiarTextoSiExiste("mapaCalorTitulo", t.mapaCalorTitulo);
+    cambiarTextoSiExiste("volverBtn", t.volverBtn);
+
     // INICIO.HTML
-    const bienvenido = document.getElementById("bienvenidaTitulo");
-    if (bienvenido) {
-    bienvenido.textContent = t.bienvenidaTitulo;
-    document.getElementById("bienvenidaTexto").innerHTML = t.bienvenidaTexto;
-    document.getElementById("iniciarSesionBtn").textContent = t.iniciarSesionBtn;
-    document.getElementById("crearCuentaBtn").textContent = t.crearCuentaBtn;
-    }
+    cambiarTextoSiExiste("bienvenidaTitulo", t.bienvenidaTitulo);
+    cambiarHTMLSiExiste("bienvenidaTexto", t.bienvenidaTexto);
+    cambiarTextoSiExiste("iniciarSesionBtn", t.iniciarSesionBtn);
+    cambiarTextoSiExiste("crearCuentaBtn", t.crearCuentaBtn);
+
+    // PANEL.HTML
+    cambiarTextoSiExiste("panelTitulo", t.panelTitulo);
+    cambiarTextoSiExiste("inicioBtn", t.inicioBtn);
+    cambiarTextoSiExiste("sidebarTitulo", t.sidebarTitulo);
+    cambiarTextoSiExiste("cambiarCiudadLink", t.cambiarCiudadLink);
+    cambiarTextoSiExiste("grafikakLink", t.grafikakLink);
+    cambiarTextoSiExiste("comentariosLink", t.comentariosLink);
+    cambiarTextoSiExiste("usuarioLink", t.usuarioLink);
+    cambiarTextoSiExiste("panelEncabezado", t.panelEncabezado);
 
     // LOGIN.HTML
-    const loginTitulo = document.getElementById("loginTitulo");
-    if (loginTitulo) {
-    loginTitulo.textContent = t.loginTitulo;
-    document.getElementById("loginUsuarioLabel").textContent = t.loginUsuarioLabel;
-    document.getElementById("loginContrasenaLabel").textContent = t.loginContrasenaLabel;
-    document.getElementById("loginEntrarBtn").textContent = t.loginEntrarBtn;
-    document.getElementById("loginNoCuenta").childNodes[0].textContent = t.loginNoCuenta + " ";
-    document.getElementById("loginRegistrateLink").textContent = t.loginRegistrateLink;
+    cambiarTextoSiExiste("loginTitulo", t.loginTitulo);
+    cambiarTextoSiExiste("loginUsuarioLabel", t.loginUsuarioLabel);
+    cambiarTextoSiExiste("loginContrasenaLabel", t.loginContrasenaLabel);
+    cambiarTextoSiExiste("loginEntrarBtn", t.loginEntrarBtn);
+    cambiarTextoSiExiste("loginRegistrateLink", t.loginRegistrateLink);
+    
+    // Para el texto "¿No tienes cuenta?" que tiene un formato especial
+    const noCuentaElement = document.getElementById("loginNoCuenta");
+    if (noCuentaElement) {
+        noCuentaElement.childNodes[0].textContent = t.loginNoCuenta + " ";
     }
 
     // REGISTER.HTML
-    const registerTitulo = document.getElementById("registerTitulo");
-    if (registerTitulo) {
-    registerTitulo.textContent = t.registerTitulo;
-    document.getElementById("registerUsuarioLabel").textContent = t.registerUsuarioLabel;
-    document.getElementById("registerNombreLabel").textContent = t.registerNombreLabel;
-    document.getElementById("registerEmailLabel").textContent = t.registerEmailLabel;
-    document.getElementById("registerContrasenaLabel").textContent = t.registerContrasenaLabel;
-    document.getElementById("registerRepetirContrasenaLabel").textContent = t.registerRepetirContrasenaLabel;
-    document.getElementById("registerRegistrarseBtn").textContent = t.registerRegistrarseBtn;
-    document.getElementById("registerYaCuenta").childNodes[0].textContent = t.registerYaCuenta + " ";
-    document.getElementById("registerIniciarSesionLink").textContent = t.registerIniciarSesionLink;
+    cambiarTextoSiExiste("registerTitulo", t.registerTitulo);
+    cambiarTextoSiExiste("registerUsuarioLabel", t.registerUsuarioLabel);
+    cambiarTextoSiExiste("registerNombreLabel", t.registerNombreLabel);
+    cambiarTextoSiExiste("registerEmailLabel", t.registerEmailLabel);
+    cambiarTextoSiExiste("registerContrasenaLabel", t.registerContrasenaLabel);
+    cambiarTextoSiExiste("registerRepetirContrasenaLabel", t.registerRepetirContrasenaLabel);
+    cambiarTextoSiExiste("registerRegistrarseBtn", t.registerRegistrarseBtn);
+    cambiarTextoSiExiste("registerIniciarSesionLink", t.registerIniciarSesionLink);
+    cambiarTextoSiExiste("registerRolLabel", t.registerRolLabel);
+    cambiarTextoSiExiste("rolHerritar", t.rolHerritar);
+    cambiarTextoSiExiste("rolTurista", t.rolTurista);
+    cambiarTextoSiExiste("rolErakunde", t.rolErakunde);
+    cambiarTextoSiExiste("rolInversor", t.rolInversor);
+    
+    // Para el texto "¿Ya tienes cuenta?" que tiene un formato especial
+    const yaCuentaElement = document.getElementById("registerYaCuenta");
+    if (yaCuentaElement) {
+        yaCuentaElement.childNodes[0].textContent = t.registerYaCuenta + " ";
     }
-    //SELECTOR TIPO DE USUARIO 
-    document.getElementById("registerRolLabel").textContent = t.registerRolLabel;
-    document.getElementById("rolHerritar").textContent = t.rolHerritar;
-    document.getElementById("rolTurista").textContent = t.rolTurista;
-    document.getElementById("rolErakunde").textContent = t.rolErakunde;
-    document.getElementById("rolInversor").textContent = t.rolInversor;
 
     // COMENTARIO.HTML
-    document.getElementById("formTitulua").textContent = t.titulua;
-    document.getElementById("herrialdearenLabela").textContent = t.herrialdea;
-    document.getElementById("hiriarenLabela").textContent = t.hiria;
-    document.getElementById("kalearenLabela").textContent = t.kalea;
-    document.getElementById("postaKodearenLabela").textContent = t.postaKodea;
-    document.getElementById("motaDelituarenLabela").textContent = t.motaDelitua;
-    document.getElementById("datarenLabela").textContent = t.data;
-    document.getElementById("iruzkinLabela").textContent = t.iruzkin;
-    document.getElementById("balorazioarenLabela").textContent = t.balorazioa;
+    cambiarTextoSiExiste("formTitulua", t.titulua);
+    cambiarTextoSiExiste("herrialdearenLabela", t.herrialdea);
+    cambiarTextoSiExiste("hiriarenLabela", t.hiria);
+    cambiarTextoSiExiste("kalearenLabela", t.kalea);
+    cambiarTextoSiExiste("postaKodearenLabela", t.postaKodea);
+    cambiarTextoSiExiste("motaDelituarenLabela", t.motaDelitua);
+    cambiarTextoSiExiste("datarenLabela", t.data);
+    cambiarTextoSiExiste("iruzkinLabela", t.iruzkin);
+    cambiarTextoSiExiste("balorazioarenLabela", t.balorazioa);
 
-    document.getElementById("herrialdea").placeholder = t.placeholderHerrialdea;
-    document.getElementById("hiria").placeholder = t.placeholderHiria;
-    document.getElementById("kalea").placeholder = t.placeholderKalea;
-    
-    document.getElementById("iruzkin").placeholder = t.placeholderIruzkin;
+    // Placeholders para comentarios
+    cambiarPlaceholderSiExiste("herrialdea", t.placeholderHerrialdea);
+    cambiarPlaceholderSiExiste("hiria", t.placeholderHiria);
+    cambiarPlaceholderSiExiste("kalea", t.placeholderKalea);
+    cambiarPlaceholderSiExiste("iruzkin", t.placeholderIruzkin);
 
-    
-    document.getElementById("delituaDesgaituta").textContent = t.delituaDesgaituta;
-    document.getElementById("lapurreta").textContent = t.lapurreta;
-    document.getElementById("eraso").textContent = t.eraso;
-    document.getElementById("bandalismo").textContent = t.bandalismo;
-    document.getElementById("hilketa").textContent = t.hilketa;
-    document.getElementById("iruzur").textContent = t.iruzur;
-    document.getElementById("jazarpen").textContent = t.jazarpen;
-    document.getElementById("bortxaketa").textContent = t.bortxaketa;
-    document.getElementById("aukeratuBalorazioa").textContent = t.aukeratuBalorazioa;
-    document.getElementById("bidaliBotoia").value  = t.bidaliBotoia;
+    // Opciones select del delito
+    cambiarTextoSiExiste("delituaDesgaituta", t.delituaDesgaituta);
+    cambiarTextoSiExiste("lapurreta", t.lapurreta);
+    cambiarTextoSiExiste("eraso", t.eraso);
+    cambiarTextoSiExiste("bandalismo", t.bandalismo);
+    cambiarTextoSiExiste("hilketa", t.hilketa);
+    cambiarTextoSiExiste("iruzur", t.iruzur);
+    cambiarTextoSiExiste("jazarpen", t.jazarpen);
+    cambiarTextoSiExiste("bortxaketa", t.bortxaketa);
 
+    // Opciones select balorazioa
+    cambiarTextoSiExiste("aukeratuBalorazioa", t.aukeratuBalorazioa);
+
+    // Botón enviar (es un input type="submit", usa value en lugar de textContent)
+    cambiarValueSiExiste("bidaliBotoia", t.bidaliBotoia);
 }

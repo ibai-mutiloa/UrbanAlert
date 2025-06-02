@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Panel Londres - UrbanAlert</title>
+  <title id="panelTitulo">Panel Londres - UrbanAlert</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
@@ -15,7 +15,7 @@
   <!-- Barra superior -->
   <div class="container-fluid bg-light py-2 shadow-sm">
     <div class="container d-flex justify-content-between align-items-center">
-      <a href="index.html" class="btn btn-outline-primary">🏠 Inicio</a>
+      <a href="index.html" class="btn btn-outline-primary" id="inicioBtn">🏠 Inicio</a>
       <div class="dropdown">
         <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
           🌐 Idioma
@@ -33,17 +33,16 @@
     <div class="row">
       <!-- Sidebar -->
       <nav class="col-md-2 bg-light vh-100 p-3 shadow-sm">
-        <h4>UrbanAlert</h4>
-        <a href="seleccion-ciudad.html" class="d-block my-2">← Cambiar Ciudad</a>
-        <a href="grafikak.html" class="d-block my-2">Grafikak</a>
-        <a href="comentarios.html" class="d-block my-2">Iruzkinak</a>
-        <a href="#" class="d-block my-2">Configuración</a>
+        <h4 id="sidebarTitulo">UrbanAlert</h4>
+        <a href="seleccion-ciudad.html" class="d-block my-2" id="cambiarCiudadLink">← Cambiar Ciudad</a>
+        <a href="grafikak.html" class="d-block my-2" id="grafikakLink">Grafikak</a>
+        <a href="comentarios.html" class="d-block my-2" id="comentariosLink">Iruzkinak</a>
+        <a href="usuario.html" class="d-block my-2" id="usuarioLink">Erabiltzailea</a>
       </nav>
-
 
       <!-- Contenido principal -->
       <main class="col-md-10 p-4">
-        <h2>Panel - Londres</h2>
+        <h2 id="panelEncabezado">Panel - Londres</h2>
         <div id="map" style="height: 500px;"></div>
       </main>
     </div>

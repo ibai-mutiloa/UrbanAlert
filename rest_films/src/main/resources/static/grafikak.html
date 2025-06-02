@@ -41,13 +41,13 @@
   </div>
 
   <div class="container my-4">
-  <h2 class="mb-4">Estadísticas de Delitos</h2>
+  <h2 id="estadisticasTitulo" class="mb-4">Estadísticas de Delitos</h2>
 
   <div class="row g-4">
     <!-- Gráfico por categoría -->
     <div class="col-md-6 col-lg-6">
       <div class="card p-3 shadow-sm">
-        <h5 class="text-center">Delitos por tipo</h5>
+        <h5 id="delitosTipoTitulo" class="text-center">Delitos por tipo</h5>
         <canvas id="crimeChart" style="height:250px;"></canvas>
       </div>
     </div>
@@ -55,7 +55,7 @@
     <!-- Gráfico por año -->
     <div class="col-md-6 col-lg-6">
       <div class="card p-3 shadow-sm">
-        <h5 class="text-center">Delitos ultimo año</h5>
+        <h5 id="delitosAnioTitulo" class="text-center">Delitos último año</h5>
         <canvas id="crimeChartYear" style="height:250px;"></canvas>
       </div>
     </div>
@@ -63,14 +63,14 @@
     <!-- Mapa de calor -->
     <div class="col-12">
       <div class="card p-3 shadow-sm">
-        <h5 class="text-center">Mapa de Calor de Crímenes</h5>
+        <h5 id="mapaCalorTitulo" class="text-center">Mapa de Calor de Crímenes</h5>
         <div id="heatmap" style="height:400px;"></div>
       </div>
     </div>
   </div>
 
   <div class="text-center mt-4">
-    <a href="panel-londres.html" class="btn btn-primary">Volver al inicio</a>
+    <a href="panel-londres.html" id="volverBtn" class="btn btn-primary">Volver al inicio</a>
   </div>
 </div>
 

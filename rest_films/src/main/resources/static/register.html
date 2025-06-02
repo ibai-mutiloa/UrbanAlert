@@ -72,12 +72,17 @@
   document.getElementById("registerForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const rol = document.getElementById("rol").value;
-    localStorage.setItem("usuarioTipo", rol); // Guarda el rol en localStorage
+    // Guardar todos los campos del formulario en localStorage
+    localStorage.setItem("username", document.getElementById("username").value);
+    localStorage.setItem("name", document.getElementById("name").value);
+    localStorage.setItem("email", document.getElementById("email").value);
+    localStorage.setItem("usuarioTipo", document.getElementById("rol").value);
 
-    window.location.href = "login.html"; // O a tu dashboard directamente
+    // Simular redirección a login
+    window.location.href = "login.html";
   });
 </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/hizkuntza.js"></script>
 </body>
