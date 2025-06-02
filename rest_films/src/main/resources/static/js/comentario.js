@@ -58,11 +58,14 @@ document.querySelector("#iruzkinFormulario").addEventListener("submit", function
         document.getElementById("motaDelituarenLabela").textContent = t.erroreaMotaDelitua;
         hayError = true;
     }
-    if (postaKodea.length != 5) {
-        console.warn("Error: postaKodea incorrecto");
+    // Validación de código postal
+    const codigoPostalRegex = /^[A-Za-z0-9\s]{3,10}$/;
+    if (!codigoPostalRegex.test(postaKodea)) {
+        console.warn("Error: postaKodea no válido");
         document.getElementById("postaKodearenLabela").textContent = t.erroreaPostaKodea;
         hayError = true;
     }
+
     if (iruzkin.length < 10) {
         console.warn("Error: iruzkin demasiado corto");
         document.getElementById("iruzkinLabela").textContent = t.erroreaIruzkina;
