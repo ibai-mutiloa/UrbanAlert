@@ -1,5 +1,35 @@
 const traducciones = {
     es: {
+        suscripcionesLink: "Suscripciones",
+        suscripcionTitulo: "📦 Planes de Suscripción",
+        suscripcionGratis: "Gratis",
+        suscripcionGratisTexto: "Pensado para usuarios comunes:",
+        suscripcionGratisIdea1: "🗺️ Mapa interactivo",
+        suscripcionGratisIdea2: "🔔 Alertas personalizadas",
+        suscripcionGratisIdea3: "💬 Comentarios y valoraciones",
+        suscripcionGratisIdea4: "🔌 Acceso a API completo",
+        suscripcionGratisIdea5: "🧳 Consejos para turistas",
+
+        suscripcionBasica: "Pro",
+        suscripcionBasicaTexto: "Suscripción profesional para inversores:",
+        suscripcionBasicaIdea1: "📊 Gráficos avanzados",
+        suscripcionBasicaIdea2: "📍 Comparativa de zonas peligrosas",
+        suscripcionBasicaIdea3: "📈 Asesoría territorial",
+        suscripcionBasicaIdea4: "📤 Exportación de datos estructurados",
+        suscripcionBasicaIdea5: "🌐 API integrada",
+        suscripcionBasicaIdea6: "🏢 Análisis de ubicación de negocios",
+        suscripcionBasicaIdea7: "🚚 Rutas logísticas seguras",
+
+        suscripcionPremium: "Premium",
+        suscripcionPremiumTexto: "Para administraciones y cuerpos de seguridad:",
+        suscripcionPremiumIdea1: "🧠 Análisis de impacto en seguridad",
+        suscripcionPremiumIdea2: "🎓 Formación especializada",
+        suscripcionPremiumIdea3: "🤖 Modelado predictivo (ML)",
+        suscripcionPremiumIdea4: "📚 Licencias de información agregada",
+        suscripcionPremiumIdea5: "🛡️ Plataforma avanzada para fuerzas de seguridad",
+        suscripcionPremiumIdea6: "📑 Informes estratégicos para municipios",
+
+
         panelTitulo: "Panel Londres - UrbanAlert",
         inicioBtn: "🏠 Inicio",
         sidebarTitulo: "UrbanAlert",
@@ -93,6 +123,42 @@ const traducciones = {
         guardarCambiosBtn: "Guardar cambios"
     },
     eu: {
+        // Planes de suscripción detallados
+        suscripcionGratisTexto: "Erabiltzaile arruntentzat diseinatua:",
+        suscripcionGratisIdea1: "🗺️ Mapa interaktiboa",
+        suscripcionGratisIdea2: "🔔 Alerta pertsonalizatuak",
+        suscripcionGratisIdea3: "💬 Iruzkinak eta balorazioak",
+        suscripcionGratisIdea4: "🔌 API sarbide osoa",
+        suscripcionGratisIdea5: "🧳 Turista-aholkuak",
+
+        suscripcionBasicaTexto: "Inbertitzaileentzako harpidetza profesionala:",
+        suscripcionBasicaIdea1: "📊 Grafiko aurreratuak",
+        suscripcionBasicaIdea2: "📍 Arrisku-guneen konparaketa",
+        suscripcionBasicaIdea3: "📈 Lurralde-aholkularitza",
+        suscripcionBasicaIdea4: "📤 Datu egituratuak esportatzea",
+        suscripcionBasicaIdea5: "🌐 API integratua",
+        suscripcionBasicaIdea6: "🏢 Negozio-kokapenaren analisia",
+        suscripcionBasicaIdea7: "🚚 Logistika-bide seguruak",
+
+        suscripcionPremiumTexto: "Administrazioetarako eta segurtasun-indarrentzako:",
+        suscripcionPremiumIdea1: "🧠 Segurtasun-inpaktuaren analisia",
+        suscripcionPremiumIdea2: "🎓 Prestakuntza espezializatua",
+        suscripcionPremiumIdea3: "🤖 Eredu aurresalea (ML)",
+        suscripcionPremiumIdea4: "📚 Datu agregatuen lizentziak",
+        suscripcionPremiumIdea5: "🛡️ Segurtasun-indarrentzako plataforma aurreratua",
+        suscripcionPremiumIdea6: "📑 Udalerrientzako txosten estrategikoak",
+
+        // Otras traducciones faltantes
+        suscripcionTexto: "Aukeratu ondoen egokitzen zaizun plana.",
+        suscripcionBtn: "Harpidetu",
+        suscripcionesLink: "Harpidetzak",
+        suscripcionTitulo: "Harpidetzak",
+        suscripcionTexto: "Aukeratu ondoen egokitzen zaizun plana.",
+        suscripcionGratis: "Doakoa",
+        suscripcionBasica: "Oinarrizkoa",
+        suscripcionPremium: "Premium",
+        suscripcionBtn: "Harpidetu",
+
         // ... otras traducciones
         registerUsuarioLabel: "Erabiltzaile izena",
         registerNombreLabel: "Izen osoa",
@@ -186,6 +252,44 @@ const traducciones = {
         bidaliBotoia: "Bidali"
     },
     en: {
+            suscripcionesLink: "Subscription Plans",
+            suscripcionTitulo: "📦 Subscription Plans",
+            suscripcionGratis: "Free",
+            suscripcionGratisTexto: "Designed for regular users:",
+            suscripcionGratisIdea1: "🗺️ Interactive map",
+            suscripcionGratisIdea2: "🔔 Personalized alerts",
+            suscripcionGratisIdea3: "💬 Comments and ratings",
+            suscripcionGratisIdea4: "🔌 Full API access",
+            suscripcionGratisIdea5: "🧳 Tourist tips",
+
+            suscripcionBasica: "Pro",
+            suscripcionBasicaTexto: "Professional subscription for investors:",
+            suscripcionBasicaIdea1: "📊 Advanced charts",
+            suscripcionBasicaIdea2: "📍 Risk zone comparison",
+            suscripcionBasicaIdea3: "📈 Territory advisory",
+            suscripcionBasicaIdea4: "📤 Export of structured data",
+            suscripcionBasicaIdea5: "🌐 Integrated API",
+            suscripcionBasicaIdea6: "🏢 Business location analysis",
+            suscripcionBasicaIdea7: "🚚 Safe logistic routes",
+
+            suscripcionPremium: "Premium",
+            suscripcionPremiumTexto: "For administrations and security forces:",
+            suscripcionPremiumIdea1: "🧠 Security impact analysis",
+            suscripcionPremiumIdea2: "🎓 Specialized training",
+            suscripcionPremiumIdea3: "🤖 Predictive modeling (ML)",
+            suscripcionPremiumIdea4: "📚 Aggregated data licenses",
+            suscripcionPremiumIdea5: "🛡️ Advanced platform for security forces",
+            suscripcionPremiumIdea6: "📑 Strategic reports for municipalities",
+
+
+        suscripcionTitulo: "Subscription",
+        suscripcionTexto: "Choose the plan that suits you best.",
+        suscripcionGratis: "Free",
+        suscripcionBasica: "Basic",
+        suscripcionPremium: "Premium",
+        suscripcionBtn: "Subscribe",
+
+
         registerUsuarioLabel: "Username",
         registerNombreLabel: "Full name",
         registerEmailLabel: "Email",
@@ -316,6 +420,43 @@ function cambiarValueSiExiste(id, texto) {
 function cambiarIdioma(idioma) {
     idiomaActual = idioma;
     const t = traducciones[idiomaActual];
+        // PLANES DE SUSCRIPCIÓN
+    cambiarTextoSiExiste("suscripcionesLink", t.suscripcionesLink);
+    cambiarTextoSiExiste("suscripcionTitulo", t.suscripcionTitulo);
+    cambiarTextoSiExiste("suscripcionGratis", t.suscripcionGratis);
+    cambiarTextoSiExiste("suscripcionGratisTexto", t.suscripcionGratisTexto);
+    cambiarTextoSiExiste("suscripcionGratisIdea1", t.suscripcionGratisIdea1);
+    cambiarTextoSiExiste("suscripcionGratisIdea2", t.suscripcionGratisIdea2);
+    cambiarTextoSiExiste("suscripcionGratisIdea3", t.suscripcionGratisIdea3);
+    cambiarTextoSiExiste("suscripcionGratisIdea4", t.suscripcionGratisIdea4);
+    cambiarTextoSiExiste("suscripcionGratisIdea5", t.suscripcionGratisIdea5);
+
+    cambiarTextoSiExiste("suscripcionBasica", t.suscripcionBasica);
+    cambiarTextoSiExiste("suscripcionBasicaTexto", t.suscripcionBasicaTexto);
+    cambiarTextoSiExiste("suscripcionBasicaIdea1", t.suscripcionBasicaIdea1);
+    cambiarTextoSiExiste("suscripcionBasicaIdea2", t.suscripcionBasicaIdea2);
+    cambiarTextoSiExiste("suscripcionBasicaIdea3", t.suscripcionBasicaIdea3);
+    cambiarTextoSiExiste("suscripcionBasicaIdea4", t.suscripcionBasicaIdea4);
+    cambiarTextoSiExiste("suscripcionBasicaIdea5", t.suscripcionBasicaIdea5);
+    cambiarTextoSiExiste("suscripcionBasicaIdea6", t.suscripcionBasicaIdea6);
+    cambiarTextoSiExiste("suscripcionBasicaIdea7", t.suscripcionBasicaIdea7);
+
+    cambiarTextoSiExiste("suscripcionPremium", t.suscripcionPremium);
+    cambiarTextoSiExiste("suscripcionPremiumTexto", t.suscripcionPremiumTexto);
+    cambiarTextoSiExiste("suscripcionPremiumIdea1", t.suscripcionPremiumIdea1);
+    cambiarTextoSiExiste("suscripcionPremiumIdea2", t.suscripcionPremiumIdea2);
+    cambiarTextoSiExiste("suscripcionPremiumIdea3", t.suscripcionPremiumIdea3);
+    cambiarTextoSiExiste("suscripcionPremiumIdea4", t.suscripcionPremiumIdea4);
+    cambiarTextoSiExiste("suscripcionPremiumIdea5", t.suscripcionPremiumIdea5);
+    cambiarTextoSiExiste("suscripcionPremiumIdea6", t.suscripcionPremiumIdea6);
+
+    cambiarTextoSiExiste("suscripcionTitulo", t.suscripcionTitulo);
+    cambiarTextoSiExiste("suscripcionTexto", t.suscripcionTexto);
+    cambiarTextoSiExiste("suscripcionGratis", t.suscripcionGratis);
+    cambiarTextoSiExiste("suscripcionBasica", t.suscripcionBasica);
+    cambiarTextoSiExiste("suscripcionPremium", t.suscripcionPremium);
+    cambiarTextoSiExiste("suscripcionBtn", t.suscripcionBtn);
+
     // PERFIL USUARIO (añadimos las traducciones para estos IDs)
     cambiarTextoSiExiste("editUsernameLabel", t.registerUsuarioLabel);
     cambiarTextoSiExiste("editNameLabel", t.registerNombreLabel);
