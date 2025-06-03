@@ -47,32 +47,43 @@ document.addEventListener('DOMContentLoaded', function () {
           ) {
             const marker = L.marker([crime.latitude, crime.longitude], { icon: icons[tipo] })
               .addTo(map)
-              .bindPopup(`<b>Categoría:</b> ${crime.category}<br><b>Fecha:</b> ${crime.month}`);
+              .bindPopup(`<b>Categoría:</b> ${crime.category}<br><b>Fecha:</b> ${crime.month}`).on('popupopen', function() {
+                if (window._paq) {
+                  _paq.push(['trackEvent', 'Mapa', 'Abrir popup crimen', crime.category]);
+                }
+              });
             markers.set('crime_' + crime.id, marker);
           }
         });
       })
       .catch(err => console.error('Error fetching crimes:', err));
 
-    // Cargar comentarios
-    fetch('/api/comments')
-      .then(response => response.json())
-      .then(comments => {
-        comments.forEach(comment => {
-          if (comment.latitude && comment.longitude) {
-            const marker = L.marker([comment.latitude, comment.longitude], { icon: commentIcon })
-              .addTo(map)
-              .bindPopup(`
-                <b>Comentario:</b> ${comment.text}<br>
-                <b>Tipo de delito:</b> ${comment.crimeType || 'No especificado'}<br>
-                <b>Fecha:</b> ${comment.date || 'No especificada'}<br>
-                <b>Valoración:</b> ${comment.rating || 'No disponible'}
-              `);
-            markers.set('comment_' + comment.id, marker);
-          }
-        });
-      })
-      .catch(err => console.error('Error fetching comments:', err));
+      // Cargar comentarios
+      fetch('/api/comments')
+        .then(response => response.json())
+        .then(comments => {
+          comments.forEach(comment => {
+            if (comment.latitude && comment.longitude) {
+              const marker = L.marker([comment.latitude, comment.longitude], { icon: commentIcon })
+                .addTo(map)
+                .bindPopup(`
+                  <b>Comentario:</b> ${comment.text}<br>
+                  <b>Tipo de delito:</b> ${comment.crimeType || 'No especificado'}<br>
+                  <b>Fecha:</b> ${comment.date || 'No especificada'}<br>
+                  <b>Valoración:</b> ${comment.rating || 'No disponible'}
+                `)
+                .on('popupopen', function () {
+                  if (window._paq) {
+                    _paq.push(['trackEvent', 'Mapa', 'Abrir popup comentario', comment.crimeType || 'No especificado']);
+                  }
+                });
+
+              markers.set('comment_' + comment.id, marker);
+            }
+          });
+        })
+        .catch(err => console.error('Error fetching comments:', err));
+
   }
 
   // Filtro de tipo de crimen
@@ -80,9 +91,16 @@ document.addEventListener('DOMContentLoaded', function () {
   if (filterSelect) {
     filterSelect.addEventListener('change', function () {
       currentFilter = this.value;
+        _paq.push(['trackEvent', 'Filtro de crimen', 'Seleccionado', currentFilter]);
       fetchAndAddData();
     });
   }
+
+      const tipoUsuario = localStorage.getItem('usuarioTipo');
+    if (tipoUsuario) {
+      _paq.push(['setCustomDimension', 1, tipoUsuario]); // Asegúrate de haber creado esta dimensión en Matomo
+    }
+
 
   // Inicializar y actualizar cada 10 segundos
   fetchAndAddData();

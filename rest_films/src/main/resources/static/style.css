@@ -53,3 +53,23 @@ body, html {
 nav.bg-light a:hover {
   text-decoration: underline;
 }
+
+html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1; /* Ocupa todo el espacio disponible */
+    }
+
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      border-top: 1px solid #ccc;
+    }
