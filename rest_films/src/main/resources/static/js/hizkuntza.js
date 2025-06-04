@@ -1,5 +1,7 @@
 const traducciones = {
     es: {
+
+        alertakLink: "Alertas",
         suscripcionesLink: "Suscripciones",
         suscripcionTitulo: "📦 Planes de Suscripción",
         suscripcionGratis: "Gratis",
@@ -123,6 +125,7 @@ const traducciones = {
         guardarCambiosBtn: "Guardar cambios"
     },
     eu: {
+        alertakLink: "Alertak",
         // Planes de suscripción detallados
         suscripcionGratisTexto: "Erabiltzaile arruntentzat diseinatua:",
         suscripcionGratisIdea1: "🗺️ Mapa interaktiboa",
@@ -252,6 +255,7 @@ const traducciones = {
         bidaliBotoia: "Bidali"
     },
     en: {
+            alertakLink: "Alerts",
             suscripcionesLink: "Subscription Plans",
             suscripcionTitulo: "📦 Subscription Plans",
             suscripcionGratis: "Free",
@@ -421,6 +425,7 @@ function cambiarIdioma(idioma) {
     idiomaActual = idioma;
     const t = traducciones[idiomaActual];
         // PLANES DE SUSCRIPCIÓN
+    cambiarTextoSiExiste("alertakLink", t.alertakLink);
     cambiarTextoSiExiste("suscripcionesLink", t.suscripcionesLink);
     cambiarTextoSiExiste("suscripcionTitulo", t.suscripcionTitulo);
     cambiarTextoSiExiste("suscripcionGratis", t.suscripcionGratis);

@@ -29,7 +29,7 @@
 </script>
 <!-- End Matomo Code -->
 </head>
-<body id="iruzkinBody">
+<body id="alertakBody">
   <!-- Ejemplo para poner en el body, arriba a la izquierda -->
 <a href="panel-londres.html" style="position: fixed; top: 10px; left: 10px; font-size: 24px; font-weight: bold; text-decoration: none; color: black; background: #eee; padding: 5px 10px; border-radius: 4px; box-shadow: 0 0 4px rgba(0,0,0,0.2); z-index: 1000;">×</a>
 
@@ -48,9 +48,9 @@
         </div>
       </div>
     </div>
-    <div id="iruzkinak">
-        <form id="iruzkinFormulario" class="container my-4" style="max-width: 600px;">
-        <h2 id="formTitulua" class="mb-4 text-center">Iruzkina gehitu</h2>
+    <div id="alertakFormularioBloque">
+        <form id="alertaFormulario" class="container my-4" style="max-width: 600px;">
+        <h2 id="formTitulua" class="mb-4 text-center">Alertak aktibatu</h2>
 
         <div class="mb-3">
           <label for="herrialdea" id="herrialdearenLabela" class="form-label">Herrialdea:</label>
@@ -72,44 +72,8 @@
           <input type="text" id="postaKodea" name="postaKodea" placeholder="Adib: 48001" class="form-control" required>
         </div>
 
-        <div class="mb-3">
-          <label for="motaDelitua" id="motaDelituarenLabela" class="form-label">Aukeratu delitu mota:</label>
-          <select id="motaDelitua" name="motaDelitua" class="form-select" required>
-            <option id="delituaDesgaituta" value="" disabled selected>-- Aukeratu delitua --</option>  
-            <option id="lapurreta" value="robo">robo</option>
-            <option id="eraso" value="asalto">asalto</option>
-            <option id="bandalismo" value="vandalismo">vandalismo</option>
-            <option id="hilketa" value="homicidio">homicidio</option>
-            <option id="iruzur" value="fraude">fraude</option>
-            <option id="jazarpen" value="acoso">acoso</option>
-            <option id="bortxaketa" value="violacion">violación</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label for="data" id="datarenLabela" class="form-label">Data:</label>
-          <input type="date" id="data" name="data" class="form-control" required>
-        </div>
-
-        <div class="mb-3">
-          <label for="iruzkin" id="iruzkinLabela" class="form-label">Idatzi hemen iruzkina:</label>
-          <textarea id="iruzkin" name="iruzkin" placeholder="Idatzi hemen zure iruzkina" rows="6" class="form-control" required></textarea>
-        </div>
-
-        <div class="mb-3">
-          <label for="balorazioa" id="balorazioarenLabela" class="form-label">Baloratu delitua (1-txikia, 5-grabe):</label>
-          <select id="balorazioa" name="balorazioa" class="form-select" required>
-            <option id="aukeratuBalorazioa" value="" disabled selected>-- Aukeratu balorazioa --</option>  
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-
         <div class="d-grid">
-          <button id="bidaliBotoia" type="submit" class="btn btn-primary btn-lg">Bidali</button>
+          <button id="bidaliBotoia" type="submit" class="btn btn-primary btn-lg">Aktibatu</button>
         </div>
       </form>
 
@@ -125,7 +89,7 @@
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <script src="js/comentario.js"></script>
+  <script src="js/alertak.js"></script>
   <script src="js/hizkuntza.js"></script>
 </body>
 </html>

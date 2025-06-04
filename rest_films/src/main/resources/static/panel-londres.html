@@ -39,6 +39,7 @@
         <a href="comentarios.html" class="d-block my-2" id="comentariosLink">Iruzkinak</a>
         <a href="usuario.html" class="d-block my-2" id="usuarioLink">Erabiltzailea</a>
         <a href="suscripciones.html" class="d-block my-2" id="suscripcionesLink">Suscripciones</a>
+        <a href="alertak.html" class="d-block my-2" id="alertakLink">Alertak</a>
       </nav>
 
       <!-- Contenido principal -->
@@ -69,18 +70,24 @@
   <footer class="bg-black text-center py-3 mt-5 border-top">
     <p style="color: white;">Laguntza behar ezkero: <a href="mailto:urbanalertlaguntza@gmail.com">urbanalertlaguntza@gmail.com</a></p>
   </footer>
-    <script type="text/javascript">
-    var _paq = window._paq = window._paq || [];
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="https://localhost:8080/";
-      _paq.push(['setTrackerUrl', u+'matomo.php']);
-      _paq.push(['setSiteId', '1']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-    })();
-  </script>
-
+<script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="http://localhost:9090/"; // No usar https si no tienes certificado
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<script>
+  // Evento personalizado: cambio de filtro
+  document.getElementById('crimeFilter').addEventListener('change', function() {
+    var filtro = this.value;
+    _paq.push(['trackEvent', 'FiltroDelito', 'Seleccionado', filtro]);
+  });
+</script>
 </body>
 </html>
