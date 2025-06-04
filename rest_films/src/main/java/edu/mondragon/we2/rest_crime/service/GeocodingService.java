@@ -24,7 +24,7 @@ public class GeocodingService {
     public double[] geocode(String street, String city, String country) {
         String address = street + ", " + city + ", " + country;
 
-        String url = UriComponentsBuilder.fromHttpUrl("https://nominatim.openstreetmap.org/search")
+        var url = UriComponentsBuilder.fromHttpUrl("https://nominatim.openstreetmap.org/search")
                 .queryParam("q", address)
                 .queryParam("format", "json")
                 .queryParam("limit", 1)
@@ -32,7 +32,7 @@ public class GeocodingService {
                 .toUriString();
 
         try {
-            HttpHeaders headers = new HttpHeaders();
+            var headers = new HttpHeaders();
             headers.set("User-Agent", "MiApp/1.0 (contacto@ejemplo.com)");  // IMPORTANTE: pon aquí tu user-agent válido
 
             HttpEntity<String> entity = new HttpEntity<>(headers);
@@ -42,14 +42,15 @@ public class GeocodingService {
 
             if (results.isArray() && results.size() > 0) {
                 JsonNode obj = results.get(0);
-                double lat = obj.get("lat").asDouble();
-                double lon = obj.get("lon").asDouble();
+                var lat = obj.get("lat").asDouble();
+                var lon = obj.get("lon").asDouble();
                 return new double[]{lat, lon};
             }
         } catch (Exception e) {
             System.err.println("Error geocoding: " + e.getMessage());
         }
 
-        return null;
+        return new double[0];
+
     }
 }

@@ -22,7 +22,7 @@ public class CommentController {
     private GeocodingService geocodingService;  // Inyectar el servicio
 
     @PostMapping
-    public ResponseEntity<?> createComment(@RequestBody Comment comment) {
+    public ResponseEntity<Object> createComment(@RequestBody Comment comment) {
         try {
             System.out.println("Recibido comentario:");
             System.out.println(comment);
@@ -41,7 +41,7 @@ public class CommentController {
                 }
             }
 
-            Comment saved = commentRepository.save(comment);
+            var saved = commentRepository.save(comment);
             System.out.println("Comentario guardado con ID: " + saved.getId());
             return ResponseEntity.ok(saved);
 

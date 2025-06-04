@@ -1,7 +1,5 @@
 package edu.mondragon.we2.rest_crime.model;
 
-import java.util.UUID;
-
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
@@ -18,6 +16,7 @@ public class CrimeData {
     private Double longitude;
 
     public CrimeData() {
+        throw new UnsupportedOperationException("Constructor hutsa");
     }
 
     @Column("street_id")

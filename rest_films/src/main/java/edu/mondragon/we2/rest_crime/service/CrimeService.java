@@ -22,7 +22,7 @@ public class CrimeService {
 
     public long getNextCrimeId() {
         // Crear la consulta SELECT con SimpleStatement
-        String selectQuery = "SELECT last_id FROM crime_id_counter WHERE counter_name = 'crime'";
+        var selectQuery = "SELECT last_id FROM crime_id_counter WHERE counter_name = 'crime'";
         SimpleStatement selectStmt = SimpleStatement.builder(selectQuery).build();
 
         Long lastId = Optional.ofNullable(cassandraTemplate.selectOne(selectStmt, Long.class))
@@ -30,7 +30,7 @@ public class CrimeService {
         long nextId = lastId + 1;
 
         // Crear la consulta UPDATE con parámetro usando SimpleStatement
-        String updateQuery = "UPDATE crime_id_counter SET last_id = ? WHERE counter_name = 'crime'";
+        var updateQuery = "UPDATE crime_id_counter SET last_id = ? WHERE counter_name = 'crime'";
         SimpleStatement updateStmt = SimpleStatement.builder(updateQuery)
                                                    .addPositionalValue(nextId)
                                                    .build();
