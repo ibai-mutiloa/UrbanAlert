@@ -127,5 +127,15 @@
 
   <script src="js/comentario.js"></script>
   <script src="js/hizkuntza.js"></script>
+    <script>
+    document.getElementById('iruzkinFormulario').addEventListener('submit', function(e) {
+      var herrialdea = document.getElementById('herrialdea').value;
+      var hiria = document.getElementById('hiria').value;
+      var motaDelitua = document.getElementById('motaDelitua').value;
+      var balorazioa = document.getElementById('balorazioa').value;
+
+      _paq.push(['trackEvent', 'Iruzkinak', 'FormularioEnviado', `${herrialdea} - ${hiria} - ${motaDelitua} (${balorazioa})`]);
+    });
+  </script>
 </body>
 </html>
