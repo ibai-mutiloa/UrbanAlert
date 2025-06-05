@@ -16,7 +16,6 @@ public class CrimeData {
     private Double longitude;
 
     public CrimeData() {
-        throw new UnsupportedOperationException("Constructor hutsa");
     }
 
     @Column("street_id")

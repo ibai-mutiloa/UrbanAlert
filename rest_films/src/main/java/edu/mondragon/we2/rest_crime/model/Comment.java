@@ -27,7 +27,6 @@ public class Comment {
     private int rating;
 
     public Comment() {
-        throw new UnsupportedOperationException("Constructor hutsa");
     }
 
     // Getters y setters para todos los campos
