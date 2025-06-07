@@ -26,17 +26,19 @@
   <!-- Barra superior -->
   <div class="container-fluid bg-light py-2 shadow-sm">
     <div class="container d-flex justify-content-between align-items-center">
-      <a href="index.html" class="btn btn-outline-primary" id="inicioBtn">🏠 Inicio</a>
-      <div class="dropdown">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-          🌐 Idioma
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-          <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">🇪🇸 Español</a></li>
-          <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('eu')">🇪🇺 Euskara</a></li>
-          <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('en')">🇬🇧 English</a></li>
-        </ul>
-      </div>
+      <a href="index.html" class="btn" id="inicioBtn" style="background-color: #003366; color: white;">
+        🏠 Inicio
+      </a>
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #003366; color: #fff; border-color: #0a58ca;">
+            🌐 Idioma
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">🇪🇸 Español</a></li>
+            <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('eu')">🇪🇺 Euskara</a></li>
+            <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('en')">🇬🇧 English</a></li>
+          </ul>
+        </div>
     </div>
   </div>
 
@@ -44,18 +46,18 @@
     <div class="row">
       <!-- Sidebar -->
       <nav class="col-md-2 bg-light vh-100 p-3 shadow-sm">
-        <h4 id="sidebarTitulo">UrbanAlert</h4>
-        <a href="seleccion-ciudad.html" class="d-block my-2" id="cambiarCiudadLink">← Cambiar Ciudad</a>
-        <a href="grafikak.html" class="my-2" id="grafikakLink">Grafikak</a>
-        <a href="comentarios.html" class="d-block my-2" id="comentariosLink">Iruzkinak</a>
-        <a href="usuario.html" class="d-block my-2" id="usuarioLink">Erabiltzailea</a>
-        <a href="suscripciones.html" class="d-block my-2" id="suscripcionesLink">Suscripciones</a>
-        <a href="alertak.html" class="d-block my-2" id="alertakLink">Alertak</a>
+        <h2 id="sidebarTitulo">UrbanAlert</h2>
+        <a href="seleccion-ciudad.html" class="d-block my-2" id="cambiarCiudadLink" style="color: black;">← Cambiar Ciudad</a>
+        <a href="grafikak.html" class="my-2" id="grafikakLink" style="color: black;">Grafikak</a>
+        <a href="comentarios.html" class="d-block my-2" id="comentariosLink" style="color: black;">Iruzkinak</a>
+        <a href="usuario.html" class="d-block my-2" id="usuarioLink" style="color: black;">Erabiltzailea</a>
+        <a href="suscripciones.html" class="d-block my-2" id="suscripcionesLink" style="color: black;">Suscripciones</a>
+        <a href="alertak.html" class="d-block my-2" id="alertakLink" style="color: black;">Alertak</a>
       </nav>
 
       <!-- Contenido principal -->
       <main class="col-md-10 p-4">
-        <h2 id="panelEncabezado">Panel - Londres</h2>
+        <h1 id="panelEncabezado">Panel - Londres</h1>
         <div id="map" style="height: 500px;"></div>
         <div class="mb-3">
         <label for="crimeFilter" class="form-label">Filtrar por tipo de delito:</label>

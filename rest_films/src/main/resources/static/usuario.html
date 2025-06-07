@@ -22,11 +22,13 @@
 
     <div class="container-fluid bg-light py-2 shadow-sm">
     <div class="container d-flex justify-content-between align-items-center">
-      <a href="index.html" class="btn btn-outline-primary" id="inicioBtn">🏠 Inicio</a>
+      <a href="index.html" class="btn" id="inicioBtn" style="background-color: #003366; color: white;">
+        🏠 Inicio
+      </a>
       <div class="dropdown">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-          🌐 Idioma
-        </button>
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #003366; color: #fff; border-color: #0a58ca;">
+            🌐 Idioma
+          </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
           <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">🇪🇸 Español</a></li>
           <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('eu')">🇪🇺 Euskara</a></li>
@@ -40,7 +42,7 @@
     <a href="panel-londres.html" style="position: fixed; top: 10px; left: 10px; font-size: 24px; font-weight: bold; text-decoration: none; color: black; background: #eee; padding: 5px 10px; border-radius: 4px; box-shadow: 0 0 4px rgba(0,0,0,0.2); z-index: 1000;">×</a>
 
     <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
-      <h2 class="mb-4 text-center">👤</h2>
+      <h1 class="mb-4 text-center">👤</h1>
       <form id="userForm">
         <div class="mb-3">
           <label for="editUsername" class="form-label" id="editUsernameLabel">Nombre de Usuario</label>

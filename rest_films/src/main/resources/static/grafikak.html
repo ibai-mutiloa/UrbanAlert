@@ -24,13 +24,13 @@
 
 
   <!-- Barra superior -->
-  <div class="container-fluid bg-light py-2 shadow-sm">
+  <header class="container-fluid bg-light py-2 shadow-sm">
     <div class="container d-flex justify-content-between align-items-center">
-      <a href="index.html" class="btn btn-outline-primary">🏠 Inicio</a>
+      <a href="index.html" class="btn" id="inicioBtn" style="background-color: #003366; color: white;">🏠 Inicio</a>
       <div class="dropdown">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-          🌐 Idioma
-        </button>
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #003366; color: #fff; border-color: #0a58ca;">
+            🌐 Idioma
+          </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
           <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('es')">🇪🇸 Español</a></li>
           <li><a class="dropdown-item" href="#" onclick="cambiarIdioma('eu')">🇪🇺 Euskara</a></li>
@@ -38,16 +38,16 @@
         </ul>
       </div>
     </div>
-  </div>
+  </header>
 
   <div class="container my-4">
-  <h2 id="estadisticasTitulo" class="mb-4">Estadísticas de Delitos</h2>
+  <h1 id="estadisticasTitulo" class="mb-4 text-center">Estadísticas de Delitos</h1>
 
   <div class="row g-4">
     <!-- Gráfico por categoría -->
     <div class="col-md-6 col-lg-6">
       <div class="card p-3 shadow-sm">
-        <h5 id="delitosTipoTitulo" class="text-center">Delitos por tipo</h5>
+        <h2 id="delitosTipoTitulo" class="text-center">Delitos por tipo</h2>
         <canvas id="crimeChart" style="height:250px;"></canvas>
       </div>
     </div>
@@ -55,7 +55,7 @@
     <!-- Gráfico por año -->
     <div class="col-md-6 col-lg-6">
       <div class="card p-3 shadow-sm">
-        <h5 id="delitosAnioTitulo" class="text-center">Delitos último año</h5>
+        <h2 id="delitosAnioTitulo" class="text-center">Delitos último año</h2>
         <canvas id="crimeChartYear" style="height:250px;"></canvas>
       </div>
     </div>
@@ -63,7 +63,7 @@
     <!-- Mapa de calor -->
     <div class="col-12">
       <div class="card p-3 shadow-sm">
-        <h5 id="mapaCalorTitulo" class="text-center">Mapa de Calor de Crímenes</h5>
+        <h2 id="mapaCalorTitulo" class="text-center">Mapa de Calor de Crímenes</h2>
         <div id="heatmap" style="height:400px;"></div>
       </div>
     </div>
