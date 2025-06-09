@@ -58,18 +58,18 @@
       <!-- Contenido principal -->
       <main class="col-md-10 p-4">
         <h1 id="panelEncabezado">Panel - Londres</h1>
-        <div id="map" style="height: 500px;"></div>
-        <div class="mb-3">
-        <label for="crimeFilter" class="form-label">Filtrar por tipo de delito:</label>
-        <select id="crimeFilter" class="form-select">
-          <option value="todos">Todos</option>
-          <option value="robo">Robo</option>
-          <option value="asalto">Asalto</option>
-          <option value="vandalismo">Vandalismo</option>
-          <option value="homicidio">Homicidio</option>
-          <option value="fraude">Fraude</option>
-          <option value="acoso">Acoso</option>
-        </select>
+          <div id="map" style="height: 500px;"></div>
+          <div class="mb-3">
+          <label for="crimeFilter" class="form-label">Filtrar por tipo de delito:</label>
+            <select id="crimeFilter" class="form-select">
+              <option value="todos">Todos</option>
+              <option value="robo">Robo</option>
+              <option value="asalto">Asalto</option>
+              <option value="vandalismo">Vandalismo</option>
+              <option value="homicidio">Homicidio</option>
+              <option value="fraude">Fraude</option>
+              <option value="acoso">Acoso</option>
+            </select>
       </div>
       </main>
     </div>
@@ -102,5 +102,11 @@
     _paq.push(['trackEvent', 'FiltroDelito', 'Seleccionado', filtro]);
   });
 </script>
+<!-- Mensaje visual para filtro -->
+<div id="filtroAlerta" class="alert alert-info position-fixed top-0 start-50 translate-middle-x mt-3 d-none"
+     style="z-index: 1050; width: 300px; text-align: center;">
+  <!-- Texto se pone con JS -->
+</div>
+
 </body>
 </html>

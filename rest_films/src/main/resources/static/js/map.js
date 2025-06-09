@@ -93,6 +93,13 @@ document.addEventListener('DOMContentLoaded', function () {
       currentFilter = this.value;
         _paq.push(['trackEvent', 'Filtro de crimen', 'Seleccionado', currentFilter]);
       fetchAndAddData();
+       // Mostrar mensaje visual al cambiar el filtro
+    const filtroAlerta = document.getElementById('filtroAlerta');
+    if (filtroAlerta) {
+      filtroAlerta.textContent = "Filtroa erabili da";
+      filtroAlerta.classList.remove('d-none');
+      setTimeout(() => filtroAlerta.classList.add('d-none'), 3000);
+    }
     });
   }
 
