@@ -1,3 +1,11 @@
+    function escapeHtml(text) {
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#39;");
+        }
 document.querySelector("#iruzkinFormulario").addEventListener("submit", function (e) {
     e.preventDefault();
     const t = traducciones[idiomaActual];
@@ -19,14 +27,15 @@ document.querySelector("#iruzkinFormulario").addEventListener("submit", function
         document.getElementById(id).textContent = "";
     });
 
-    let herrialdea = document.getElementById("herrialdea").value.trim();
-    let hiria = document.getElementById("hiria").value.trim();
-    let kalea = document.getElementById("kalea").value.trim();
-    let postaKodea = document.getElementById("postaKodea").value.trim();
-    let data = document.getElementById("data").value.trim();
-    let iruzkin = document.getElementById("iruzkin").value.trim();
+    let herrialdea = escapeHtml(document.getElementById("herrialdea").value.trim());
+    let hiria = escapeHtml(document.getElementById("hiria").value.trim());
+    let kalea = escapeHtml(document.getElementById("kalea").value.trim());
+    let postaKodea = escapeHtml(document.getElementById("postaKodea").value.trim());
+    let data = document.getElementById("data").value.trim();  // fecha no necesita escape
+    let iruzkin = escapeHtml(document.getElementById("iruzkin").value.trim());
     let balorazioa = document.getElementById("balorazioa").value;
     let motaDelitua = document.getElementById("motaDelitua").value;
+
 
     console.log("Datos recogidos:");
     console.log({ herrialdea, hiria, kalea, postaKodea, data, iruzkin, balorazioa, motaDelitua });
@@ -115,4 +124,5 @@ document.querySelector("#iruzkinFormulario").addEventListener("submit", function
         console.warn("Formulario con errores, no se envía");
         alert(t.alertaGaizki);
     }
+
 });
